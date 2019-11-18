@@ -2,12 +2,9 @@
 <html>
     <head>
         <link rel="stylesheet" href="styles.css">
-
         <script src="myscript.js"></script>
             
     </head>
-
-    
     <body>
         <div id="header">
             <div><a href="#" onclick="window.location.reload(true);">LOGO</a></div>
@@ -96,7 +93,7 @@
 
                             <label for="password">Password:</label><br>
                             <input type="password" id="password" name="password" required>
-                            <input type="checkbox" onclick="showPassword()"><img src="eye.svg" alt="show" style="width: 20px"> Password <br>
+                            <input type="checkbox"><img src="eye.svg" alt="show" style="width: 20px" onclick="showPassword()" id="psw_icon"> Password <br>
 
                             <input type="checkbox" name="remember" style="margin-bottom:15px"> Remember Me
                         </div>
@@ -126,7 +123,7 @@
 
                         <label for="password">Password:</label><br>
                         <input type="password" id="password" name="password" required>
-                        <input type="checkbox" onclick="showPassword()"><i class="fas fa-eye"></i> Show Password <br>
+                        <input type="checkbox" onclick="showPassword()"> Show Password <br>
 
                         <input type="checkbox" name="remember" style="margin-bottom:15px"> Remember Me
 

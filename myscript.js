@@ -30,12 +30,16 @@
 
             function showPassword() {
             var password = document.getElementById("password");
+            var icon = document.getElementById("psw_icon");
             if (password.type === "password") {
                 password.type = "text";
+                icon.src = "eye.svg";
             } else {
                 password.type = "password";
+                icon.src = "eye_slash.svg";
             }
             }
+
 
             function signupForm(){
                 document.getElementById('accountForm').style.display='block';
@@ -51,3 +55,5 @@
             if(e.key === "Escape") {
             document.getElementById("PopUpForm").style.display='block'            }
             }
+
+
