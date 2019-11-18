@@ -4,8 +4,12 @@
 	  <link rel="stylesheet" href="style/header.css">
 	  <link rel="stylesheet" type="text/css" href="style/carousel.css">
 	  <link rel="stylesheet" type="text/css" href="treatstyle.css">
+<<<<<<< HEAD
         <script src="script/headerScript.js"></script>
         <script src="script/carousel.js"></script>
+=======
+        <script src="script/header.js"></script>
+>>>>>>> 1cc9fe492935088a929b336162f6a68b263ff0f5
   <title>Index</title>
   <style>
     #right-col{
@@ -42,6 +46,7 @@
         padding: 1em;
         background-color: darkgray;
     }
+
 </style>
 </head>
 <body>
@@ -51,12 +56,12 @@
     <div id="header" style="z-index: 5">
 
             <!--Logo-->
-            <div><a href="#" onclick="window.location.reload(true);"> <img src="treatlogo.png" width="100px" height="70px"></a></div>
+            <div><a href="#" onclick="window.location.reload(true);"> <img src="treatlogo.png" width="150px" height="100px"></a></div>
 
             <!--Search Bar & Search Icon-->
             <div style="width: 50%; margin-top: 17px;">
                 <input type="text" placeholder="Search.." style="width: 90%; border-radius: 5px;margin-right: 15px;">
-                <input type="image" src="search.svg" alt="Submit" style="width: 27px; filter:invert(1); position: absolute; top: 17px;">
+                <input type="image" src="search.svg" alt="Submit" style="width: 27px; filter:invert(1); position: absolute; top: 38px;">
             </div>
 
             <!--Cart Icon-->
@@ -88,17 +93,17 @@
                             <label for="user_name">Username: </label><br>
                             <input type="text" id="user_name" name="user_name">
 
-
                             <br><br>
 
                             <label for="email">E-mail:</label><br>
                             <input type="email" id="email" name="user_mail" placeholder="example@google.com">
 
                             <br><br>
-
+                            
                             <label for="password">Password:</label><br>
-                            <input type="password" id="passwordReg" name="password" required>
-                            <img src="eye.svg" alt="show" style="width: 20px" onclick="showPasswordReg()" id="psw_icon_reg"> Password <br>
+                                <input type="password" id="passwordReg" name="password" style="width: 95%" required>
+                                <img src="eye.svg" alt="show" class="psw_icon" onclick="showPasswordReg()" id="psw_icon_reg"><br>
+
 
                             <input type="checkbox" name="remember" style="margin-bottom:15px"> Remember Me
                         </div>
@@ -130,8 +135,8 @@
                         <br><br>
 
                         <label for="password">Password:</label><br>
-                        <input type="password" id="passwordLogin" name="password" required>
-                        <img src="eye.svg" alt="show" style="width: 20px" onclick="showPasswordLogin()" id="psw_icon_login"> Password <br>
+                        <input type="password" id="passwordLogin" name="password" style="width: 95%" required>
+                        <img src="eye.svg" alt="show" class="psw_icon" onclick="showPasswordLogin()" id="psw_icon_login"><br>
 
                         <input type="checkbox" name="remember" style="margin-bottom:15px"> Remember Me
 
@@ -291,10 +296,14 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 
 <br><br>
 
 
+=======
+<br><br>
+>>>>>>> 1cc9fe492935088a929b336162f6a68b263ff0f5
 
 
 
@@ -329,34 +338,34 @@
 
 
 <footer>
-<ul>
+<ul class="footerul">
 
 <div class='footerli'>
-<h4>Customer Service</h4>
-	<li><a href="contact.html">Contact Us</a></li>
-	<li><a href="FAQ.html">FAQ</a></li>
+<h4 style="margin-bottom: 1em">Customer Service</h4>
+	<li style="margin-bottom: 1em"><a href="contact.html">Contact Us</a></li>
+	<li style="margin-bottom: 1em"><a href="FAQ.html">FAQ</a></li>
 	<li><a href="HowToBuy.html">How To Buy</a></li>
 
-</div>
-</ul>
-
-<ul>
-<div class='footerli'>
-	<h4>trEAT</h4>
-	<li><a href="AboutUs.html">About Us</a></li>
-	<li><a href="T&C.html">T&C</a></li>
-	<li><a href="Privacy.html">Privacy Policy</a></li>
 
 </div>
 </ul>
-<ul>
+
+<ul class="footerul">
 <div class='footerli'>
-	<h4>Social Media</h4>
-	<li><a href="url"><img src="fb.png" width="30px" height="30px"></a></li>
-	<li><a href="url"><img src="insta.png" width="30px" height="30px"></a></li>
-	<li><a href="url"><img src="twitter.png" width="35px" height="35px"></a></li>
-	<li>&nbsp</li>
-	<li><small><i>Copyright &copy; 2019 trEAT. All Rights Reserved.</i></small></li>
+	<h4 style="margin-bottom: 1em">trEAT</h4>
+	<li style="margin-bottom: 1em"><a href="AboutUs.html">About Us</a></li>
+	<li style="margin-bottom: 1em"><a href="T&C.html">T&C</a></li>
+	<li style="margin-bottom: 1em"><a href="Privacy.html">Privacy Policy</a></li>
+
+</div>
+</ul>
+<ul class="footerul">
+<div class='footerli'>
+	<h4 style="margin-bottom: 1.5em">Social Media</h4>
+	<li style="display:inline; margin-right: 1em"><img src="fb.png" width="30px" height="30px"></li>
+	<li style="display:inline; margin-right: 1em"><img src="insta.png" width="30px" height="30px"></li>
+	<li style="display:inline"><img src="twitterr.png" width="30px" height="30px"></li>
+	<p style="margin-top: 1.5em"><small><i>Copyright &copy; 2019 trEAT. All Rights Reserved.</i></small></p>
 </div>
 </ul>
 

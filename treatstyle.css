@@ -3,13 +3,13 @@
 	min-height: 100vh;
 }
 
-#right-col {
+#rightcol {
 	padding-bottom: 2.5rem;
-	margin-left: 155px;
-	margin-right: 90px;
+	margin-left: 100px;
+	margin-right: 100px;
 }
 
-#left-col {
+#leftcol {
 	width: 150px;
 	height: 100%;
 	background-color: red;}
@@ -20,10 +20,12 @@ nav {
 
 footer {
 	display: flex;
-	bottom: 0; 
+	justify-content: center;
+	bottom: 0;
+	padding-right: 10px;
 	width: 100%;
 	background-color: #f04343;
-	color: black;
+	font-family:Helvetica,Tahoma,Arial,Sans-serif;
 }
 
 a {
@@ -35,7 +37,8 @@ a:hover {
 	text-decoration: underline;
 }
 
-ul {	flex-direction: row;
+.footerul {
+	flex-direction: row;
 	list-style-type: none;
 }
 
@@ -44,5 +47,5 @@ ul {	flex-direction: row;
 	color: white;
 	display: block;
 	width: 300px;
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 	margin: 10px;}
