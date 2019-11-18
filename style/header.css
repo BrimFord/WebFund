@@ -1,10 +1,12 @@
         *{
             box-sizing: border-box;
+            margin:0;
+            padding:0;
         }
-
 
         #header {
             display: flex;
+            flex-direction: row;
             background-color: rgba(240, 67, 67, 1);
             color: white;
             width: 100%;
