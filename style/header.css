@@ -119,3 +119,14 @@
         clear: both;
         display: table;
         }
+
+        .icon{
+            width: 30px;
+            filter: invert(1);
+        }
+
+        .formOption{
+            float: right;
+            color: rgba(240, 67, 67);
+            cursor: pointer;
+        }

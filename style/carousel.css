@@ -29,19 +29,19 @@ body{
 
 
 .main-banner #imgban3{
-	background-image: url("Japan.png");
+	background-image: url("../Japan.png");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 }
 .main-banner #imgban2{
-	background-image: url("LOCAL collection.png");
+	background-image: url("../LOCAL collection.png");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 }
 .main-banner #imgban1{
-	background-image: url("Banner.png");
+	background-image: url("../Banner.png");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -64,7 +64,8 @@ body{
 
 .imgbanbtn-prev{
 	left:5px;
-	background-image: url("backbutton.png");
+	background-image: url("../backbutton.png");
+	z-index: 3;
 	background-size: 60%;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -72,7 +73,8 @@ body{
 }
 .imgbanbtn-next{
 	right:5px;
-	background-image: url("nextbutton.png");
+	background-image: url("../nextbutton.png");
+	z-index: 3;
 	background-size: 60%;
 	background-position: center;
 	background-repeat: no-repeat;
