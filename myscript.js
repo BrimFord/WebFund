@@ -28,9 +28,9 @@
             }
             }
 
-            function showPassword() {
-            var password = document.getElementById("password");
-            var icon = document.getElementById("psw_icon");
+            function showPasswordReg() {
+            var password = document.getElementById("passwordReg");
+            var icon = document.getElementById("psw_icon_reg");
             if (password.type === "password") {
                 password.type = "text";
                 icon.src = "eye_slash.svg";
@@ -39,6 +39,19 @@
                 icon.src = "eye.svg";
             }
             }
+
+            function showPasswordLogin() {
+                var password = document.getElementById("passwordLogin");
+                var icon = document.getElementById("psw_icon_login");
+                if (password.type === "password") {
+                    password.type = "text";
+                    icon.src = "eye_slash.svg";
+                } else {
+                    password.type = "password";
+                    icon.src = "eye.svg";
+                }
+                }
+
 
 
             function signupForm(){
