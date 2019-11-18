@@ -1,3 +1,9 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+
 #page {
 	position: relative;
 	min-height: 100vh;
@@ -27,7 +33,6 @@ footer {
 	background-color: #f04343;
 	font-family:Helvetica,Tahoma,Arial,Sans-serif;
 }
-
 a {
 	color: white;
 	text-decoration: none;
