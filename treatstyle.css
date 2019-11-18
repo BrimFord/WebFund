@@ -3,13 +3,13 @@
 	min-height: 100vh;
 }
 
-#right-col {
+#rightcol {
 	padding-bottom: 2.5rem;
-	margin-left: 155px;
-	margin-right: 90px;
+	margin-left: 100px;
+	margin-right: 100px;
 }
 
-#left-col {
+#leftcol {
 	width: 150px;
 	height: 100%;
 	background-color: red;}
