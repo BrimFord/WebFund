@@ -21,10 +21,11 @@ nav {
 footer {
 	display: flex;
 	justify-content: center;
-	bottom: 0; 
+	bottom: 0;
 	padding-right: 10px;
 	width: 100%;
 	background-color: #f04343;
+	font-family:Helvetica,Tahoma,Arial,Sans-serif;
 }
 
 a {
@@ -36,7 +37,7 @@ a:hover {
 	text-decoration: underline;
 }
 
-.footerul {	
+.footerul {
 	flex-direction: row;
 	list-style-type: none;
 }
