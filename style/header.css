@@ -125,6 +125,13 @@
             filter: invert(1);
         }
 
+        .psw_icon{
+            width: 20px;
+            position: relative;
+            top: 4px;
+            margin-left: 5px;
+        }
+
         .formOption{
             float: right;
             color: rgba(240, 67, 67);
