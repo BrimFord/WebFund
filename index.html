@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	  <link rel="stylesheet" href="header.css">
-	  <link rel="stylesheet" type="text/css" href="style.css">
+	  <link rel="stylesheet" href="style/header.css">
+	  <link rel="stylesheet" type="text/css" href="style/carousel.css">
 	  <link rel="stylesheet" type="text/css" href="treatstyle.css">
-        <script src="headerScript.js"></script>
+        <script src="script/headerScript.js"></script>
   <title>Index</title>
   <style>
     #right-col{
@@ -40,7 +40,7 @@
 <body>
 
 
-	<div id="header">
+	<div id="header" style="z-index: 1900">
             <div><a href="#" onclick="window.location.reload(true);"> <img src="treatlogo.png" width="100px" height="70px">
 </a></div>
 
@@ -82,8 +82,8 @@
 
 
                             <label for="password">Password:</label><br>
-                            <input type="password" id="password" name="password" required>
-                            <img src="eye.svg" alt="show" style="width: 20px" onclick="showPassword()" id="psw_icon"> Password <br>
+                            <input type="password" id="passwordReg" name="password" required>
+                            <img src="eye.svg" alt="show" style="width: 20px" onclick="showPasswordReg()" id="psw_icon_reg"> Password <br>
 
                             <input type="checkbox" name="remember" style="margin-bottom:15px"> Remember Me
                         </div>
@@ -112,8 +112,8 @@
                         <br><br>
 
                         <label for="password">Password:</label><br>
-                        <input type="password" id="password" name="password" required>
-                        <input type="checkbox" onclick="showPassword()"> Show Password <br>
+                        <input type="password" id="passwordLogin" name="password" required>
+                        <img src="eye.svg" alt="show" style="width: 20px" onclick="showPasswordLogin()" id="psw_icon_login"> Password <br>
 
                         <input type="checkbox" name="remember" style="margin-bottom:15px"> Remember Me
 
@@ -316,11 +316,11 @@
 
         setTimeout(function(){
           document.getElementById("imgban1").style.right = "0px";
-         document.getElementById("imgban1").style.zIndex = "1000";
+         document.getElementById("imgban1").style.zIndex = "1";
           document.getElementById("imgban2").style.right = "-1200px";
-         document.getElementById("imgban2").style.zIndex = "1500";
+         document.getElementById("imgban2").style.zIndex = "2";
          document.getElementById("imgban3").style.right = "1200px";
-         document.getElementById("imgban3").style.zIndex = "500";
+         document.getElementById("imgban3").style.zIndex = "0.5";
         },500);
          setTimeout(function(){
           document.getElementById("imgban2").style.opacity = "1";},1000);
@@ -332,11 +332,11 @@
 
         setTimeout(function(){
           document.getElementById("imgban2").style.right = "0px";
-         document.getElementById("imgban2").style.zIndex = "1000";
+         document.getElementById("imgban2").style.zIndex = "1";
           document.getElementById("imgban3").style.right = "-1200px";
-         document.getElementById("imgban3").style.zIndex = "1500";
+         document.getElementById("imgban3").style.zIndex = "2";
          document.getElementById("imgban1").style.right = "1200px";
-         document.getElementById("imgban1").style.zIndex = "500";
+         document.getElementById("imgban1").style.zIndex = "0.5";
         },500);
          setTimeout(function(){
           document.getElementById("imgban3").style.opacity = "1";},1000);
@@ -348,11 +348,11 @@
 
         setTimeout(function(){
           document.getElementById("imgban3").style.right = "0px";
-         document.getElementById("imgban3").style.zIndex = "1000";
+         document.getElementById("imgban3").style.zIndex = "1";
           document.getElementById("imgban1").style.right = "-1200px";
-         document.getElementById("imgban1").style.zIndex = "1500";
+         document.getElementById("imgban1").style.zIndex = "2";
          document.getElementById("imgban2").style.right = "1200px";
-         document.getElementById("imgban2").style.zIndex = "500";
+         document.getElementById("imgban2").style.zIndex = "0.5";
         },500);
          setTimeout(function(){
           document.getElementById("imgban1").style.opacity = "1";},1000);

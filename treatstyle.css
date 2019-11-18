@@ -20,7 +20,6 @@ nav {
 
 footer {
 	display: flex;
-	position: sticky;
 	bottom: 0; 
 	width: 100%;
 	background-color: #f04343;
