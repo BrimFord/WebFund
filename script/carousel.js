@@ -8,6 +8,8 @@
       bannerLoop();
     }, bannerTimer);
 
+    /*
+
     document.getElementById("main-banner").onmouseenter = function(){
       clearInterval(startBannerLoop);
     }
@@ -32,6 +34,7 @@
     document.getElementById("imgbanbtn-next").onclick = function(){bannerLoop()
 
     }
+    */
 
 
 
