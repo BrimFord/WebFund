@@ -35,6 +35,12 @@
         font-size: 16px;
         white-space: nowrap;
     }
+    .imgc{
+        display: inline-block;
+        margin: 50px;
+        padding: 1em;
+        background-color: darkgray;
+    }
 </style>
 </head>
 <body>
@@ -157,13 +163,13 @@
   </div>
   <br><br>
   <div id="right-col">
-      <div class="container" style="display: inline;">
-        <h1>Categories</h1>
-            <a href="index.html" style="padding-left: 1170px; font-size: 30px;">See All!</a>
-            <div style="display: inline-block"><img src="Japan.svg" width="150px" height="150px"><p>Japan</p></div>
-            <div style="display: inline-block"><img src="SouthKorea.svg" width="150px" height="150px"><p>South Korea</p></div>
-            <div style="display: inline-block"><img src="Thailand.svg" width="150px" height="150px"><p>Thailand</p></div>
-            <div style="display: inline-block"><img src="China.svg" width="150px" height="150px"><p>China</p></div>
+    <h1>Categories</h1>
+    <div class="container">
+        <div class="imgc"><img src="Japan.svg" width="150px" height="150px"><p>Japan</p></div>
+        <div class="imgc"><img src="SouthKorea.svg" width="150px" height="150px"><p>South Korea</p></div>
+        <div class="imgc"><img src="Thailand.svg" width="150px" height="150px"><p>Thailand</p></div>
+        <div class="imgc"><img src="China.svg" width="150px" height="150px"><p>China</p></div>
+        <div><a href=""><button class="button">See More</button></a></div>
     </div>
   </div>
   <br><br>
@@ -281,7 +287,7 @@
         </div>
     </div>
 </div>
- 
+<br><br>
 
   <script >
     var bannerStatus = 1;
