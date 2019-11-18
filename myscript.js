@@ -33,10 +33,10 @@
             var icon = document.getElementById("psw_icon");
             if (password.type === "password") {
                 password.type = "text";
-                icon.src = "eye.svg";
+                icon.src = "eye_slash.svg";
             } else {
                 password.type = "password";
-                icon.src = "eye_slash.svg";
+                icon.src = "eye.svg";
             }
             }
 
