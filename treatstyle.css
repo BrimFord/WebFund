@@ -20,10 +20,11 @@ nav {
 
 footer {
 	display: flex;
+	justify-content: center;
 	bottom: 0; 
+	padding-right: 10px;
 	width: 100%;
 	background-color: #f04343;
-	color: black;
 }
 
 a {
@@ -35,7 +36,8 @@ a:hover {
 	text-decoration: underline;
 }
 
-ul {	flex-direction: row;
+.footerul {	
+	flex-direction: row;
 	list-style-type: none;
 }
 
@@ -44,5 +46,5 @@ ul {	flex-direction: row;
 	color: white;
 	display: block;
 	width: 300px;
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 	margin: 10px;}
