@@ -102,7 +102,7 @@ body{
 
 .flex-container {
   display: flex;
-  
+
 }
 
 .flex-container  div {
@@ -118,5 +118,3 @@ body{
 	 width:150px;
 	 height:70px;
 }
-
-	
