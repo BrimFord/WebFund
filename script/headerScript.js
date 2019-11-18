@@ -1,3 +1,7 @@
+            function close(){
+                document.getElementById('PopUpForm').style.display='none';
+            }
+
 
             function validateForm(){
 
