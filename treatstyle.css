@@ -1,0 +1,49 @@
+#page {
+	position: relative;
+	min-height: 100vh;
+}
+
+#right-col {
+	padding-bottom: 2.5rem;
+	margin-left: 155px;
+	margin-right: 90px;
+}
+
+#left-col {
+	width: 150px;
+	height: 100%;
+	background-color: red;}
+
+nav {
+	float:left;
+}
+
+footer {
+	display: flex;
+	position: sticky;
+	bottom: 0; 
+	width: 100%;
+	background-color: #f04343;
+	color: black;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+ul {	flex-direction: row;
+	list-style-type: none;
+}
+
+
+.footerli {
+	color: white;
+	display: block;
+	width: 300px;
+	padding-bottom: 10px;
+	margin: 10px;}
