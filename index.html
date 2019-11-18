@@ -4,7 +4,12 @@
 	  <link rel="stylesheet" href="style/header.css">
 	  <link rel="stylesheet" type="text/css" href="style/carousel.css">
 	  <link rel="stylesheet" type="text/css" href="treatstyle.css">
+<<<<<<< HEAD
+        <script src="script/headerScript.js"></script>
+        <script src="script/carousel.js"></script>
+=======
         <script src="script/header.js"></script>
+>>>>>>> 1cc9fe492935088a929b336162f6a68b263ff0f5
   <title>Index</title>
   <style>
     #right-col{
@@ -41,6 +46,7 @@
         padding: 1em;
         background-color: darkgray;
     }
+
 </style>
 </head>
 <body>
@@ -143,8 +149,10 @@
                 </form>
         </div>
 
-        <div class ="main-banner" id = "main-banner">
-    <div class = "imgbanbtn imgbanbtn-prev" id="imgbanbtn-prev"></div>
+        <div class ="main-banner" id = "main-banner" >
+    <div class = "imgbanbtn imgbanbtn-prev" id="imgbanbtn-prev" >
+        
+    </div>
     <div class ="imgban" id = "imgban3">
       <div class = "imgban-box">
         <h2></h2>
@@ -288,20 +296,22 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
+
 <br><br>
 
-  <script >
-    var bannerStatus = 1;
-    var bannerTimer = 4000;/*4s*/
-    window.onload = function (){
-      bannerLoop();
-    }
 
-    var startBannerLoop = setInterval(function(){
-      bannerLoop();
-    }, bannerTimer);
+=======
+<br><br>
+>>>>>>> 1cc9fe492935088a929b336162f6a68b263ff0f5
 
-    document.getElementById("main-banner").onmouseenter = function(){
+
+
+</body>
+
+<script>
+  <!-- FOR the banner to stop moving -->
+   document.getElementById("main-banner").onmouseenter = function(){
       clearInterval(startBannerLoop);
     }
 
@@ -309,7 +319,7 @@
     }, bannerTimer);
   }
 
-    document.getElementById("imgbanbtn-prev").onclick = function(){
+   document.getElementById("imgbanbtn-prev").onclick = function(){
       if (bannerStatus===1){
         bannerStatus = 2;
       }
@@ -323,118 +333,9 @@
 
     }
     document.getElementById("imgbanbtn-next").onclick = function(){bannerLoop()
-
     }
+</script>
 
-
-
-    function bannerLoop(){
-      if (bannerStatus===1){
-        document.getElementById("imgban2").style.opacity = "0";
-
-        setTimeout(function(){
-          document.getElementById("imgban1").style.right = "0px";
-         document.getElementById("imgban1").style.zIndex = "1";
-          document.getElementById("imgban2").style.right = "-1200px";
-         document.getElementById("imgban2").style.zIndex = "2";
-         document.getElementById("imgban3").style.right = "1200px";
-         document.getElementById("imgban3").style.zIndex = "0.5";
-        },500);
-         setTimeout(function(){
-          document.getElementById("imgban2").style.opacity = "1";},1000);
-             bannerStatus = 2;
-      }
-
-      else if (bannerStatus===2){
-        document.getElementById("imgban3").style.opacity = "0";
-
-        setTimeout(function(){
-          document.getElementById("imgban2").style.right = "0px";
-         document.getElementById("imgban2").style.zIndex = "1";
-          document.getElementById("imgban3").style.right = "-1200px";
-         document.getElementById("imgban3").style.zIndex = "2";
-         document.getElementById("imgban1").style.right = "1200px";
-         document.getElementById("imgban1").style.zIndex = "0.5";
-        },500);
-         setTimeout(function(){
-          document.getElementById("imgban3").style.opacity = "1";},1000);
-             bannerStatus = 3;
-      }
-
-        else if (bannerStatus===3){
-        document.getElementById("imgban1").style.opacity = "0";
-
-        setTimeout(function(){
-          document.getElementById("imgban3").style.right = "0px";
-         document.getElementById("imgban3").style.zIndex = "1";
-          document.getElementById("imgban1").style.right = "-1200px";
-         document.getElementById("imgban1").style.zIndex = "2";
-         document.getElementById("imgban2").style.right = "1200px";
-         document.getElementById("imgban2").style.zIndex = "0.5";
-        },500);
-         setTimeout(function(){
-          document.getElementById("imgban1").style.opacity = "1";},1000);
-             bannerStatus = 1;
-      }
-
-    }
-    function bannerLoop2(){
-      if (bannerStatus===1){
-        document.getElementById("imgban3").style.opacity = "0";
-
-        setTimeout(function(){
-          document.getElementById("imgban1").style.right = "0px";
-         document.getElementById("imgban1").style.zIndex = "1000";
-          document.getElementById("imgban2").style.right = "-1200px";
-         document.getElementById("imgban2").style.zIndex = "1500";
-         document.getElementById("imgban3").style.right = "1200px";
-         document.getElementById("imgban3").style.zIndex = "500";
-        },500);
-         setTimeout(function(){
-          document.getElementById("imgban3").style.opacity = "1";},1000);
-             bannerStatus = 2;
-      }
-
-      else if (bannerStatus===2){
-        document.getElementById("imgban1").style.opacity = "0";
-
-        setTimeout(function(){
-          document.getElementById("imgban2").style.right = "0px";
-         document.getElementById("imgban2").style.zIndex = "1000";
-          document.getElementById("imgban3").style.right = "-1200px";
-         document.getElementById("imgban3").style.zIndex = "1500";
-         document.getElementById("imgban1").style.right = "1200px";
-         document.getElementById("imgban1").style.zIndex = "500";
-        },500);
-         setTimeout(function(){
-          document.getElementById("imgban1").style.opacity = "1";},1000);
-             bannerStatus = 3;
-      }
-
-        else if (bannerStatus===3){
-        document.getElementById("imgban2").style.opacity = "0";
-
-        setTimeout(function(){
-          document.getElementById("imgban3").style.right = "0px";
-         document.getElementById("imgban3").style.zIndex = "1000";
-          document.getElementById("imgban1").style.right = "-1200px";
-         document.getElementById("imgban1").style.zIndex = "1500";
-         document.getElementById("imgban2").style.right = "1200px";
-         document.getElementById("imgban2").style.zIndex = "500";
-        },500);
-         setTimeout(function(){
-          document.getElementById("imgban2").style.opacity = "1";},1000);
-             bannerStatus = 1;
-      }
-
-    }
-
-  </script>
-
-
-
-
-</body>
 
 <footer>
 <ul class="footerul">
