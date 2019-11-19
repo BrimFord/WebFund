@@ -1,8 +1,3 @@
-            function close(){
-                document.getElementById('PopUpForm').style.display='none';
-            }
-
-
             function validateForm(){
 
             var name = document.forms["accountForm"]["user_name"].value;
