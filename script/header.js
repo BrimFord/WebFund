@@ -2,6 +2,8 @@
 
             var name = document.forms["accountForm"]["user_name"].value;
             var email = document.forms["accountForm"]["email"].value;
+            var password = document.forms["accountForm"]["passwordReg"].value;
+            var address = document.forms["accountForm"]["address1"].value;
             atpos = email.indexOf("@");
             dotpos = email.lastIndexOf(".");
 
@@ -9,20 +11,29 @@
             if (name == "") {
             alert("Name field can't be empty!");
             document.accountForm.user_name.focus();
-            return false;
             }
 
             if (atpos < 1 || ( dotpos - atpos < 2 )) {
-            alert("Please enter email in correct format: example@mail.com")
+            alert("Please enter email in correct format: example@mail.com");
             document.accountForm.email.focus() ;
-            return false;
             }
+
+            if (password == "") {
+                alert("You don't like security?");
+                document.accountForm.password.focus();
+                }
+
+                
+            if (address == "") {
+                alert("Name field can't be empty!");
+                document.accountForm.address.focus();
+                }
+    
 
             if( postcode == "" || postcode.length != 5 ) {
             
                 alert( "Please provide a postcode in the format #####." );
-                document.FormDemo.postcode.focus() ;
-                return false;
+                document.accountForm.postcode.focus() ;
              }
 
 
@@ -30,7 +41,8 @@
 
         function validateFormLogin(){
 
-             var email = document.forms["loginForm"]["email"].value;
+             var email = document.forms["loginForm"]["emailLogin"].value;
+             var password = document.forms["loginForm"]["passwordLogin"].value;
             atpos = email.indexOf("@");
             dotpos = email.lastIndexOf(".");
 
@@ -40,6 +52,12 @@
             document.accountForm.email.focus() ;
             return false;
             }
+
+            if (password == "") {
+                alert("You don't like security?");
+                document.accountForm.password.focus();
+                return false;
+                }
 
         }
 
@@ -49,13 +67,6 @@
                 modal.style.display = "none";
             }
             }
-
-            function NoPopUpCart (){
-                var cart = document.getElementById('PopUpCart');
-                if (event.target == cart) {
-                    cart.style.display = "none";
-                }
-                }
 
 
             function showPasswordReg() {
@@ -82,8 +93,6 @@
                 }
                 }
 
-
-
             function signupForm(){
                 document.getElementById('accountForm').style.display='block';
                 document.getElementById('loginForm').style.display='none';
@@ -94,18 +103,13 @@
                 document.getElementById('loginForm').style.display='block';
             }
 
-            function keyPress (e) {
-            if(e.key === "Escape") {
-            document.getElementById("PopUpForm").style.display='block'            }
-            }
-
-
             function payment(){
                     if(document.getElementById('method').value == "card") {
                         document.getElementById('card').style.display = 'block';
-                    } else {
-                        document.getElementById('test').style.display = 'none';
+                    } else if (document.getElementById('method').value == "cod"){
+                        document.getElementById('card').style.display = 'none';
                     }
+                    
           }
 
 

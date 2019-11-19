@@ -1,0 +1,220 @@
+*{
+	box-sizing: border-box;
+	margin:0;
+	padding:0;
+}
+	
+body{
+	font-family:Helvetica,Tahoma,Arial,Sans-serif;
+}
+
+#header {
+	display: flex;
+	background-color: rgba(240, 67, 67, 1);
+	color: white;
+	width: 100%;
+	height: 105px ;
+	position: sticky;
+	top: 0;
+	padding: 15px;
+	border-radius: 0 0 5px 5px;
+	align-items: center;
+}
+
+ul {
+	list-style-type: none;
+}
+
+#header li{
+	display: inline;
+	padding: 25px;
+	font-size: 20px;
+}
+
+li a {
+	color: white;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+
+
+input[type=text], input[type=password], input[type=email], input[type=number], select, select option{
+		width: 100%;
+		padding: 10px;
+		margin-top: 5px;
+		margin-bottom: 22px;
+		border: none;
+		background: #ddd;
+		border-radius: 7px;
+		}
+
+
+
+button {
+	background-color: #f1f1f1;
+	border: 0.5px solid;
+	font-size: medium;
+	border-radius: 7px;
+	color: #4CAF50;
+	padding: 14px 20px;
+	margin: 8px 0;
+	cursor: pointer;
+	width: 100%;
+	transition-duration: 0.5s;
+	}
+
+button:hover{
+	background-color: #4CAF50;
+	color: white;
+	opacity: 1;
+	}
+
+
+.cancelbtn {
+	padding: 14px 20px;
+	color: #f04343;
+	border-color: #f04343;
+	margin-right: 10px;
+	}
+
+.cancelbtn:hover{
+	background-color: #f04343;
+	color: white;
+	opacity: 1;
+	}
+
+.cancelbtn, .signupbtn {
+	float: right;
+	width: 25%;
+	}
+
+
+.PopUpContainer {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 2001; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgba(60, 60, 60, 0.8);
+	padding-top: 50px;
+	}
+
+.PopUpContent {
+	background-color: #fefefe;
+	margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+	width: 50%; /* Could be more or less, depending on screen size */
+	border-radius: 5px;
+	}
+
+/* Clear floats */
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+	}
+
+.icon{
+	width: 30px;
+	filter: invert(1);
+	cursor: pointer;
+}
+
+.psw_icon{
+	width: 20px;
+	position: relative;
+	top: 4px;
+	margin-left: 13px;
+}
+
+.formOption{
+	float: right;
+	color: rgba(240, 67, 67);
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+#page {
+	position: relative;
+	min-height: 100vh;
+	margin-top: 50px;
+}
+
+#rightcol {
+	padding-bottom: 2.5rem;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+#rc {
+	padding-bottom: 2.5rem;
+	margin-left: 300px;
+	margin-right: 250px;
+	top: 200;
+}
+
+
+.sidebar {
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  margin-top: 30px;
+  margin-left: 50px;
+  height: 100%;
+  background-color: #ffffff00;
+  padding-top: 16px;
+  font-size: 1.2em;
+}
+
+
+.top {
+  float: right;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  margin-top: 400px;
+  Margin-left: 90%;
+  height: 100%;
+  background-color: #ffffff00;
+  padding-top: 16px;
+  font-size: 1.2em;
+}
+
+
+footer {
+	display: flex;
+	justify-content: center;
+	bottom: 0;
+	padding-right: 10px;
+	width: 100%;
+	background-color: #f04343;
+	font-family:Helvetica,Tahoma,Arial,Sans-serif !important;
+}
+
+.footerul {
+	flex-direction: row;
+	list-style-type: none;
+}
+
+
+.footerli {
+	color: white;
+	display: block;
+	width: 300px;
+	padding-bottom: 5px;
+	margin: 10px;}
