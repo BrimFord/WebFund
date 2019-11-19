@@ -33,6 +33,21 @@
 
         }
 
+        function validateFormLogin(){
+
+             var email = document.forms["loginForm"]["email"].value;
+            atpos = email.indexOf("@");
+            dotpos = email.lastIndexOf(".");
+
+            
+            if (atpos < 1 || ( dotpos - atpos < 2 )) {
+            alert("Please enter email in correct format: example@mail.com")
+            document.accountForm.email.focus() ;
+            return false;
+            }
+
+        }
+
             function NoPopUp (){
             var modal = document.getElementById('PopUpForm');
             if (event.target == modal) {
