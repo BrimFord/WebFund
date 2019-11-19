@@ -55,6 +55,14 @@
             }
             }
 
+            function NoPopUpCart (){
+                var cart = document.getElementById('PopUpCart');
+                if (event.target == cart) {
+                    cart.style.display = "none";
+                }
+                }
+
+
             function showPasswordReg() {
             var password = document.getElementById("passwordReg");
             var icon = document.getElementById("psw_icon_reg");
@@ -95,5 +103,14 @@
             if(e.key === "Escape") {
             document.getElementById("PopUpForm").style.display='block'            }
             }
+
+
+            function payment(){
+                    if(document.getElementById('method').value == "card") {
+                        document.getElementById('card').style.display = 'block';
+                    } else {
+                        document.getElementById('test').style.display = 'none';
+                    }
+          }
 
 
