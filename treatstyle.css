@@ -6,7 +6,8 @@
 
 #page {
 	position: relative;
-	min-height: 500vh;
+	min-height: 100vh;
+	margin-top: 50px;
 }
 
 #rightcol {
@@ -15,14 +16,40 @@
 	margin-right: 100px;
 }
 
-#leftcol {
-	width: 150px;
-	height: 100%;
-	background-color: red;}
-
-nav {
-	float:left;
+#rc {
+	padding-bottom: 2.5rem;
+	margin-left: 300px;
+	margin-right: 250px;
+	top: 200;
 }
+
+
+.sidebar {
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  margin-top: 30px;
+  margin-left: 50px;
+  height: 100%;
+  background-color: #ffffff00;
+  padding-top: 16px;
+  font-size: 1.2em;
+}
+
+
+.top {
+  float: right;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  margin-top: 400px;
+  Margin-left: 90%;
+  height: 100%;
+  background-color: #ffffff00;
+  padding-top: 16px;
+  font-size: 1.2em;
+}
+
 
 footer {
 	display: flex;
@@ -34,7 +61,7 @@ footer {
 	font-family:Helvetica,Tahoma,Arial,Sans-serif;
 }
 a {
-	color: white;
+	color: black;
 	text-decoration: none;
 }
 
