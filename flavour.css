@@ -1,0 +1,19 @@
+#right-col{
+    padding-bottom: 2.5rem;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    border: 5px;
+}
+.img{
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    margin: 15px;
+    padding: 1em;
+    text-align: center;
+    background-color: darkgray;
+}
