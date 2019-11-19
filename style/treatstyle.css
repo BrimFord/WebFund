@@ -4,6 +4,9 @@
 	padding:0;
 }
 	
+body{
+	font-family:Helvetica,Tahoma,Arial,Sans-serif;
+}
 
 #header {
 	display: flex;
@@ -26,7 +29,6 @@ ul {
 	display: inline;
 	padding: 25px;
 	font-size: 20px;
-	font-family:Helvetica,Tahoma,Arial,Sans-serif;
 }
 
 li a {
@@ -201,7 +203,7 @@ footer {
 	padding-right: 10px;
 	width: 100%;
 	background-color: #f04343;
-	font-family:Helvetica,Tahoma,Arial,Sans-serif;
+	font-family:Helvetica,Tahoma,Arial,Sans-serif !important;
 }
 
 .footerul {

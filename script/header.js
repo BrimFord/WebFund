@@ -11,26 +11,22 @@
             if (name == "") {
             alert("Name field can't be empty!");
             document.accountForm.user_name.focus();
-            return false;
             }
 
             if (atpos < 1 || ( dotpos - atpos < 2 )) {
-            alert("Please enter email in correct format: example@mail.com")
+            alert("Please enter email in correct format: example@mail.com");
             document.accountForm.email.focus() ;
-            return false;
             }
 
             if (password == "") {
                 alert("You don't like security?");
                 document.accountForm.password.focus();
-                return false;
                 }
 
                 
             if (address == "") {
                 alert("Name field can't be empty!");
                 document.accountForm.address.focus();
-                return false;
                 }
     
 
@@ -38,7 +34,6 @@
             
                 alert( "Please provide a postcode in the format #####." );
                 document.accountForm.postcode.focus() ;
-                return false;
              }
 
 
@@ -73,13 +68,6 @@
             }
             }
 
-            function NoPopUpCart (){
-                var cart = document.getElementById('PopUpCart');
-                if (event.target == cart) {
-                    cart.style.display = "none";
-                }
-                }
-
 
             function showPasswordReg() {
             var password = document.getElementById("passwordReg");
@@ -104,8 +92,6 @@
                     icon.src = "img/eye_slash.svg";
                 }
                 }
-
-
 
             function signupForm(){
                 document.getElementById('accountForm').style.display='block';
