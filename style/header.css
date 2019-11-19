@@ -25,7 +25,7 @@
 
 
 
-        input[type=text], input[type=password], input[type=email] {
+        input[type=text], input[type=password], input[type=email], input[type=number] {
         width: 100%;
         padding: 10px;
         margin-top: 5px;
@@ -131,7 +131,7 @@
             width: 20px;
             position: relative;
             top: 4px;
-            margin-left: 5px;
+            margin-left: 13px;
         }
 
         .formOption{

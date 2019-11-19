@@ -23,6 +23,14 @@
             return false;
             }
 
+            if( postcode == "" || postcode.length != 5 ) {
+            
+                alert( "Please provide a postcode in the format #####." );
+                document.FormDemo.postcode.focus() ;
+                return false;
+             }
+
+
         }
 
             function NoPopUp (){
@@ -37,10 +45,10 @@
             var icon = document.getElementById("psw_icon_reg");
             if (password.type === "password") {
                 password.type = "text";
-                icon.src = "eye_slash.svg";
+                icon.src = "img/eye.svg";
             } else {
                 password.type = "password";
-                icon.src = "eye.svg";
+                icon.src = "img/eye_slash.svg";
             }
             }
 
@@ -49,10 +57,10 @@
                 var icon = document.getElementById("psw_icon_login");
                 if (password.type === "password") {
                     password.type = "text";
-                    icon.src = "eye_slash.svg";
+                    icon.src = "/img/eye.svg";
                 } else {
                     password.type = "password";
-                    icon.src = "eye.svg";
+                    icon.src = "/img/eye_slash.svg";
                 }
                 }
 
