@@ -57,10 +57,10 @@
                 var icon = document.getElementById("psw_icon_login");
                 if (password.type === "password") {
                     password.type = "text";
-                    icon.src = "/img/eye.svg";
+                    icon.src = "img/eye.svg";
                 } else {
                     password.type = "password";
-                    icon.src = "/img/eye_slash.svg";
+                    icon.src = "img/eye_slash.svg";
                 }
                 }
 
