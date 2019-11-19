@@ -33,12 +33,35 @@
 
         }
 
+        function validateFormLogin(){
+
+             var email = document.forms["loginForm"]["email"].value;
+            atpos = email.indexOf("@");
+            dotpos = email.lastIndexOf(".");
+
+            
+            if (atpos < 1 || ( dotpos - atpos < 2 )) {
+            alert("Please enter email in correct format: example@mail.com")
+            document.accountForm.email.focus() ;
+            return false;
+            }
+
+        }
+
             function NoPopUp (){
             var modal = document.getElementById('PopUpForm');
             if (event.target == modal) {
                 modal.style.display = "none";
             }
             }
+
+            function NoPopUpCart (){
+                var cart = document.getElementById('PopUpCart');
+                if (event.target == cart) {
+                    cart.style.display = "none";
+                }
+                }
+
 
             function showPasswordReg() {
             var password = document.getElementById("passwordReg");
@@ -57,10 +80,10 @@
                 var icon = document.getElementById("psw_icon_login");
                 if (password.type === "password") {
                     password.type = "text";
-                    icon.src = "/img/eye.svg";
+                    icon.src = "img/eye.svg";
                 } else {
                     password.type = "password";
-                    icon.src = "/img/eye_slash.svg";
+                    icon.src = "img/eye_slash.svg";
                 }
                 }
 
@@ -80,5 +103,14 @@
             if(e.key === "Escape") {
             document.getElementById("PopUpForm").style.display='block'            }
             }
+
+
+            function payment(){
+                    if(document.getElementById('method').value == "card") {
+                        document.getElementById('card').style.display = 'block';
+                    } else {
+                        document.getElementById('test').style.display = 'none';
+                    }
+          }
 
 
