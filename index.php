@@ -188,7 +188,7 @@
 
                 <!--Create Account & Cancel Button-->
                 <div class="clearfix">
-                        <button type="submit" class="buttons signupbuttons" >Login</button>
+                        <button type="submit" class="buttons signupbuttons" onclick="<?php sesssion_destroy();?>">Logout</button>
                         <button type="button" class="buttons cancelbuttons" onclick="window.close()">Cancel</button>
                 </div>
                 </div>
