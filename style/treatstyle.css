@@ -248,7 +248,7 @@ input[type=text], input[type=password], input[type=email], input[type=number], s
 
 .footer .footer-content .links ul a{
 	display: block;
-	margin-bottom: 10px;
+	margin-bottom: 10px;;
 	font-size: 1.2em;
 	color: white;
 }
