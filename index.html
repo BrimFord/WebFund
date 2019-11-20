@@ -10,6 +10,10 @@
 
   <title>Index</title>
   <style>
+    a:hover {
+        text-decoration: underline;}
+
+    }
     .container3{
         display: flex;
         justify-content: space-between;
@@ -31,7 +35,7 @@
         padding: 1em;
         color: black;
         font-family: Montserrat,Arial,sans-serif;
-    }
+         }
 
 </style>
 </head>
@@ -189,16 +193,16 @@
   <br><br>
 
 
-  <div id="right-col" style="border-radius: 6px;">
+  <div id="right-col" style="border-radius: 6px; text-align: center;">
     <span><h1>Countries</h1></span>
-    <div class="container" >
-        <a href="JapanSnacks.html"><div class="imgc"><img src="Japan.svg" width="150px" height="150px"><p>Japan</p></div></a>
-        <a href="KoreanSnacks.html"><div class="imgc"><img src="SouthKorea.svg" width="150px" height="150px"><p>South Korea</p></div></a>
-        <a href="ThailandSnacks.html"><div class="imgc"><img src="Thailand.svg" width="150px" height="150px"><p>Thailand</p></div></a>
-        <a href="ChinaSnacks.html"><div class="imgc"><img src="China.svg" width="150px" height="150px"><p>China</p></div></a>
-        <a href="MalaysianSnacks.html"><div class="imgc"><img src="Malaysia.svg" width="150px" height="150px"><p>Malaysia</p></div></a>
-        
+    <div class="container">
+        <div class="imgc"><a href="JapanSnacks.html"><img src="Japan.svg" width="150px" height="150px"><p>Japan</p></a></div>
+        <div class="imgc"><a href="KoreanSnacks.html"><img src="SouthKorea.svg" width="150px" height="150px"><p>South Korea</p></a></div>
+        <div class="imgc"><a href="ThailandSnacks.html"><img src="Thailand.svg" width="150px" height="150px"><p>Thailand</p></a></div>
+        <div class="imgc"><a href="ChinaSnacks.html"><img src="China.svg" width="150px" height="150px"><p>China</p></a></div>
+        <div class="imgc"><a href="MalaysianSnacks.html"><img src="Malaysia.svg" width="150px" height="150px"><p>Malaysia</p></a></div>
     </div>
+    
   </div>
 
   <div id="right-col">
@@ -358,7 +362,7 @@
   <div class="footer-content">
 
 
-    <div class="footer-section about">
+    <div class="footer-section about" style="flex:2">
 	<h1 style="margin-bottom: 0.5em;"><span>tr</span>EAT</h1>
 	<p style="font-size:1.1em; line-height: 1.6; text-align:justify">trEAT is an online snacks shopping site founded in 2019 by individuals who thrive to supply good value global snacks to meet the discerning appetite
 of every customer for quality food products and snacks for their everyday needs.
@@ -373,7 +377,7 @@ of every customer for quality food products and snacks for their everyday needs.
     </div>
 
 
-    <div class="footer-section links">
+    <div class="footer-section links" style="flex:1">
 	<h2 style="margin-bottom: 1.5em;">Links</h2>
 	<ul>
 	  <a href="AboutUs.html"><li style="margin-bottom: 1em">About Us</li></a>
@@ -386,7 +390,7 @@ of every customer for quality food products and snacks for their everyday needs.
     </div>
 
 
-    <div class="footer-section contact-form">
+    <div class="footer-section contact-form" style="flex:2">
 	<h2 style="margin-bottom: 0.5em;">Contact Us</h2>
 	<br>
 	<form action="index.html" method="post">
