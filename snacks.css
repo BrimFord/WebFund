@@ -16,6 +16,8 @@ body{
     display: block;
     margin-left: 50px;
     margin-right: 50px;
+    text-align: justify;
+    line-height: 1.6;
 }
 .container2{
     display: flex;
@@ -63,7 +65,6 @@ body{
     display: flex;
     align-items: center;
     padding-top: 20px;
-    margin-right: 60px;
 }
 .quantity input{
     -webkit-appearance: none;
