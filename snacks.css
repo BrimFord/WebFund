@@ -1,3 +1,6 @@
+body{
+    background-color: #ffebe6;
+}
 #right-col{
     padding-bottom: 2.5rem;
     margin-left: 155px;
@@ -9,15 +12,26 @@
     border: 5px;
     background-color: #ffebe6;
 }
-.consnacks{
-    display: inline-block;
-    border: 5px;
-    margin: 70px;
-    margin-left: 30px;
-    padding: 1em;
-}
 .container1{
     display: block;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.container2{
+    display: flex;
+    align-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.container3{
+    display: flex;
+    justify-content: space-between;
+}
+.consnacks{
+    display: inline-block;
+    margin: 50px;
+    width: 75%;
+    padding: 1em;
 }
 .img{
     display: flex;
@@ -34,12 +48,14 @@
     padding: 30px;
     border: 3px solid black;
 }
-.button{
+.buynow{
+    display: flex;
+    justify-content: flex-end;
+}
+.button2{
     border: none;
     padding: 14px 28px;
     cursor: pointer;
-    display: flex;
-    justify-content: flex-end;
     font-size: 16px;
     white-space: nowrap;
 }

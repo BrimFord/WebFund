@@ -10,11 +10,17 @@
   if(!$handler){
     die("Connection failed" . mysqli_connect_error());
   }else{
-    $_SESSION['user_email']=$_POST['user_email'];
-    $_SESSION['password']=$_POST['password'];
-    $email=$_SESSION['user_email'];
-    $password=$_SESSION['password'];
 
+    if(!isset($_SESSION['emailLogin']) && !isset($_SESSION['passwordLogin'])) {
+      $_SESSION['emailLogin']=$_POST['emailLogin'];
+      $_SESSION['passwordLogin']=$_POST['passwordLogin'];
+      $email=$_SESSION['emailLogin'];
+      $password=$_SESSION['passwordLogin'];
+      }
+      else{
+    $email=$_SESSION['emailLogin'];
+    $password=$_SESSION['passwordLogin'];
+}
 
     $query="SELECT * FROM userInfo";
 

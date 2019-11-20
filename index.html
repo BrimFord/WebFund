@@ -10,6 +10,7 @@
 
   <title>Index</title>
   <style>
+    }
     .container3{
         display: flex;
         justify-content: space-between;
@@ -31,7 +32,7 @@
         padding: 1em;
         color: black;
         font-family: Montserrat,Arial,sans-serif;
-    }
+         }
 
 </style>
 </head>
@@ -112,8 +113,8 @@
 
                         <!--Create Account & Cancel Button-->
                         <div class="clearfix">
-                            <button type="submit" class="button signupbtn">Create Account</button>
-                            <button type="button" class="button cancelbtn" onclick="window.close()">Cancel</button>
+                            <button type="submit" class="buttons signupbuttons">Create Account</button>
+                            <button type="button" class="buttons cancelbuttons" onclick="window.close()">Cancel</button>
                         </div>
                     </div>
                 </form>
@@ -146,12 +147,37 @@
 
                         <!--Create Account & Cancel Button-->
                         <div class="clearfix">
-                                <button type="submit" class="button signupbtn">Login</button>
-                                <button type="button" class="button cancelbtn" onclick="window.close()">Cancel</button>
+                                <button type="submit" class="buttons signupbuttons">Login</button>
+                                <button type="button" class="buttons cancelbuttons" onclick="window.close()">Cancel</button>
                         </div>
                     </div>
                 </form>
         </div>
+
+
+
+        <!--NOT ASSIGNED TO ANYTHING YET-->
+            <div id="PopUpLog" class="PopUpContainer" onclick="NoPopUp()" >
+                <form action="/handling.php" method="POST" class="PopUpContent" id="logoutForm">
+                    
+                    <div style="padding: 15px;">
+
+                            <!--SIGN UP & LOGIN Headings-->
+                            <div style="text-align: center;">
+                                <br><br>
+                                <h1>Logging Out?</h1>
+                                <br><br>
+                            </div>
+                            <br><br>
+
+                <!--Create Account & Cancel Button-->
+                <div class="clearfix">
+                        <button type="submit" class="buttons signupbuttons" >Login</button>
+                        <button type="button" class="buttons cancelbuttons" onclick="window.close()">Cancel</button>
+                </div>
+                </div>
+                </form>
+            </div>
 
 
 
@@ -191,26 +217,22 @@
 
   <div id="right-col" style="border-radius: 6px;">
     <span><h1>Countries</h1></span>
-    <div class="container" >
-        <a href="JapanSnacks.html"><div class="imgc"><img src="Japan.svg" width="150px" height="150px"><p>Japan</p></div></a>
-        <a href="KoreanSnacks.html"><div class="imgc"><img src="SouthKorea.svg" width="150px" height="150px"><p>South Korea</p></div></a>
-        <a href="ThailandSnacks.html"><div class="imgc"><img src="Thailand.svg" width="150px" height="150px"><p>Thailand</p></div></a>
-        <a href="ChinaSnacks.html"><div class="imgc"><img src="China.svg" width="150px" height="150px"><p>China</p></div></a>
-        <a href="MalaysianSnacks.html"><div class="imgc"><img src="Malaysia.svg" width="150px" height="150px"><p>Malaysia</p></div></a>
-        
+    <div class="container" style=" text-align: center;">
+        <div class="imgc"><a href="JapanSnacks.html"><img src="Japan.svg" width="150px" height="150px"><p>Japan</p></a></div>
+        <div class="imgc"><a href="KoreanSnacks.html"><img src="SouthKorea.svg" width="150px" height="150px"><p>South Korea</p></a></div>
+        <div class="imgc"><a href="ThailandSnacks.html"><img src="Thailand.svg" width="150px" height="150px"><p>Thailand</p></a></div>
+        <div class="imgc"><a href="ChinaSnacks.html"><img src="China.svg" width="150px" height="150px"><p>China</p></a></div>
+        <div class="imgc"><a href="MalaysianSnacks.html"><img src="Malaysia.svg" width="150px" height="150px"><p>Malaysia</p></a></div>
     </div>
+    
   </div>
 
-
-  <br><br>
   <div id="right-col">
     <div class="container3">
         <h1>Categories</h1>
-        <div class="button">
-            <a href="MainStorePage.html">
-                <button class="button">See All</button>
-            </a>
-        </div>
+        <a href="MainStorePage.html">
+            <button class="button2">See All</button>
+        </a>
     </div>
     <h1>Sweet</h1><br>
     <div class="container">

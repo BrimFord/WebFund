@@ -58,9 +58,8 @@ input[type=text], input[type=password], input[type=email], input[type=number], s
 
 
 
-.button {
+.buttons {
 	background-color: #f1f1f1;
-	justify-content: center;
 	border: 0.5px solid;
 	font-size: medium;
 	border-radius: 7px;
@@ -70,27 +69,27 @@ input[type=text], input[type=password], input[type=email], input[type=number], s
 	transition-duration: 0.5s;
 	}
 
-.button:hover{
+.buttons:hover{
 	background-color: #4CAF50;
 	color: white;
 	opacity: 1;
 	}
 
 
-.cancelbtn {
+.cancelbuttons {
 	color: #f04343;
 	margin-right: 10px;
 	}
 
-.cancelbtn:hover{
+.cancelbuttons:hover{
 	background-color: #f04343;
 	color: white;
 	opacity: 1;
 	}
 
-.cancelbtn, .signupbtn {
+.cancelbuttons, .signupbuttons {
 	float: right;
-	width: 25% !important;
+	width: 25%;
 	}
 
 
@@ -102,7 +101,7 @@ input[type=text], input[type=password], input[type=email], input[type=number], s
 	top: 0;
 	width: 100%; /* Full width */
 	height: 100%; /* Full height */
-	overflow: auto; /* Enable scroll if needed */
+	overflow: scroll; /* Enable scroll if needed */
 	background-color: rgba(60, 60, 60, 0.8);
 	padding-top: 50px;
 	}
