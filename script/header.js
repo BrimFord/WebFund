@@ -1,7 +1,7 @@
             function validateForm(){
 
             var name = document.forms["accountForm"]["user_name"].value;
-            var email = document.forms["accountForm"]["email"].value;
+            var email = document.forms["accountForm"]["emailReg"].value;
             var password = document.forms["accountForm"]["passwordReg"].value;
             var address = document.forms["accountForm"]["address1"].value;
             atpos = email.indexOf("@");
@@ -11,22 +11,26 @@
             if (name == "") {
             alert("Name field can't be empty!");
             document.accountForm.user_name.focus();
+            return false;
             }
 
             if (atpos < 1 || ( dotpos - atpos < 2 )) {
             alert("Please enter email in correct format: example@mail.com");
             document.accountForm.email.focus() ;
+            return false;
             }
 
             if (password == "") {
                 alert("You don't like security?");
                 document.accountForm.password.focus();
+                return false;
                 }
 
                 
             if (address == "") {
                 alert("Address can't be empty!");
                 document.accountForm.address.focus();
+                return false;
                 }
     
 
@@ -34,6 +38,7 @@
             
                 alert( "Please provide a postcode in the format #####." );
                 document.accountForm.postcode.focus() ;
+                return false;
              }
 
         }
