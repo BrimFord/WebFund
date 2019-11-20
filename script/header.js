@@ -25,7 +25,7 @@
 
                 
             if (address == "") {
-                alert("Name field can't be empty!");
+                alert("Address can't be empty!");
                 document.accountForm.address.focus();
                 }
     
@@ -35,7 +35,6 @@
                 alert( "Please provide a postcode in the format #####." );
                 document.accountForm.postcode.focus() ;
              }
-
 
         }
 
@@ -123,3 +122,37 @@
           }
 
 
+          
+          function timer(){
+          setTimeout(function(){
+            window.location.href = 'index.html';
+            document.getElementById("checkoutForm").submit();
+         }, 5000);
+        }
+
+
+
+        function validateSubscribe(){
+            var email = document.forms["subscribeForm"]["emailSubscribe"].value;
+            atpos = email.indexOf("@");
+            dotpos = email.lastIndexOf(".");
+
+            if (atpos < 1 || ( dotpos - atpos < 2 )) {
+                alert("Please enter email in correct format: example@mail.com");
+                document.subscribeForm.email.focus() ;
+                }
+            
+            
+            if (subscribeForm.checkSubscribe.checked == false){
+                alert ('You didn\'t choose any of the checkboxes!');
+                return false;
+                    }
+
+        }
+
+        function subscribe(){
+            setTimeout(function(){
+            document.getElementById("subscribe").innerHTML = "<h1 style='text-align: center; margin-top: 115px;'> Thanks for Subscribing!</h1><br><p style='text-align: center;'><i>You won't miss out on amazing deals now.</i></p>";
+            document.getElementById("subscribeForm").submit();
+            }, 3000);
+        }

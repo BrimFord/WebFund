@@ -389,12 +389,12 @@
 	<p style="font-size:1.1em; line-height: 1.6; text-align:justify">trEAT is an online snacks shopping site founded in 2019 by individuals who thrive to supply good value global snacks to meet the discerning appetite
 of every customer for quality food products and snacks for their everyday needs.
 	</p>
-	<br>
+	<br><br>
 	<h3 style="margin-bottom: 1em;">Follow Us On</h3>
 	<ul>
-		<li style="display:inline; margin-right: 1em"><img src="fb.png" width="30px" height="30px"></li>
-	<li style="display:inline; margin-right: 1em"><img src="insta.png" width="30px" height="30px"></li>
-	<li style="display:inline"><img src="twitterr.png" width="30px" height="30px"></li>
+		<li style="display:inline; margin-right: 1em"><img src="fb.svg" width="30px" height="30px"></li>
+	<li style="display:inline; margin-right: 1em"><img src="insta.svg" width="30px" height="30px"></li>
+	<li style="display:inline"><img src="twitter.svg" width="30px" height="30px"></li>
 	</ul>
     </div>
 
@@ -411,16 +411,16 @@ of every customer for quality food products and snacks for their everyday needs.
     </div>
 
 
-    <div class="footer-section contact-form" style="flex:2">
+    <div class="footer-section contact-form" style="flex:2" id="subscribe">
 	<h2 style="margin-bottom: 0.3em;">Get Snacks News and Deals</h2>
 	<br>
-	<small><i>* indicates required field</I></small>
-	<form action="index.html" method="post">
+	<small><i>*required field</I></small>
+	<form action="index.html" method="post" id="subscribeForm">
 		<br>
 		<p>E-mail*</p>
-		<input type="email" name="email" class="text-input contact-input" style="width:350px" placeholder="Your email address..." required><br><br>
-		<input type="checkbox" name="check" value="1" required>&nbsp;By checking this box, I agree to receive emails from trEAT*<br><br>
-		<button type="submit" class="btn btn-big contact-btn">
+		<input type="email" name="emailSubscribe" class="text-input contact-input" style="width:350px" placeholder="Your email address..."><br><br>
+		<input type="checkbox" id="checkSubscribe" value="1">&nbsp;By checking this box, you agree to receive emails from trEAT*<br><br>
+		<button type="button" class="btn btn-big contact-btn" onclick="validateSubscribe(); subscribe()">
 			<b>Subscribe</b>
 		</button>
 	</form>	
