@@ -5,6 +5,9 @@
 }
 .container{
     display: flex;
+    justify-content: space-around;
+    border: 5px;
+    background-color: #ffebe6;
 }
 .consnacks{
     display: inline-block;
@@ -17,6 +20,15 @@
     display: block;
 }
 .img{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+    padding: 1em;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+}
+.img2{
     display: inline-block;
     margin: 70px;
     padding: 30px;
