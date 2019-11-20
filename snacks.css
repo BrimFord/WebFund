@@ -70,25 +70,11 @@ body{
     -webkit-appearance: none;
     border: none;
     text-align: center;
-    width: 32px;
+    width: 20px;
     font-size: 16px;
     color: #43484D;
     font-weight: 300;
     height: 30px;
-}
-button[class*=btn]{
-    width: 30px;
-    height: 30px;
-    background-color: #E1E8EE;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-}
-.plus-btn img{
-    margin-top: 2px;
-}
-.minus-btn img{
-    margin-bottom: 3px;
 }
 button:focus,
     input:focus{

@@ -3,17 +3,33 @@
 <head>
     <title>trEAT</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="snacks.css">
+    <link rel="stylesheet" type="text/css" href="style/treatstyle.css">
 </head>
 
 <body>
+    <div id="header" style="z-index: 5">
+
+        <!--Logo-->
+        <div><a href="index.html"> <img src="treatlogo.png" width="150px" height="100px" style="margin: 0 10px 0 15px;"></a></div>
+        
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>Store</li>
+            <li><a href="AboutUs.html" style="font-size: x-large; font-weight: bold;">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        
+        <!--User/Account Icon-->
+        <div onclick="document.getElementById('PopUpForm').style.display='block'" style="position: absolute; right: 50px;"><img src="img/user_circle.svg" alt="user" class="icon"></div>
+    </div>
+        
     <div id="right-col">
         <div class="container">
             <div class="img2">
                     <img src="thai(salty1).png" width="300px" height="350px">
             </div>
             <div class="consnacks">
-                <h1>Lays Assorted Nori Seaweed Potato Chips</h1>
+                <h1>Lays Assorted Nori Seaweed Potato Chips</h1><br>
                 <p>80g</p><br>
                 <h2>RM5.00</h2>
                 <div class="quantity">
@@ -28,9 +44,60 @@
             </div>
         </div>
         <div class="container1">
-            <h1>Lays Assorted Nori Seaweed Potato Chips</h1>
+            <h1>Lays Assorted Nori Seaweed Potato Chips</h1><br>
             <p>The seaweed flavor hits the tastebuds with each bite, earning this flavor a 5. After a handful or so of the seaweed-flecked chips, they start to taste like a sushi roll filled with imitation crab, wrapped in seaweed.</p>
-            </div>
+        </div>
     </div>
+
+    <!--Footer-->
+
+    <footer class="footer">
+        <div class="footer-content">
+            
+
+            <div class="footer-section about" style="flex:2">
+                <h1 style="margin-bottom: 0.5em;"><span>tr</span>EAT</h1>
+                <p style="font-size:1.1em; line-height: 1.6; text-align:justify">trEAT is an online snacks shopping site founded in 2019 by individuals who thrive to supply good value global snacks to meet the discerning appetite of every customer for quality food products and snacks for their everyday needs.</p>
+                <br>
+                <h3 style="margin-bottom: 1em;">Follow Us On</h3>
+                <ul>
+                    <li style="display:inline; margin-right: 1em"><img src="fb.png" width="30px" height="30px"></li>
+                    <li style="display:inline; margin-right: 1em"><img src="insta.png" width="30px" height="30px"></li>
+                    <li style="display:inline"><img src="twitterr.png" width="30px" height="30px"></li>
+                </ul>
+            </div>
+            
+            
+            <div class="footer-section links" style="flex:1">
+                <h2 style="margin-bottom: 1em;">Links</h2>
+                <ul>
+                    <a href="AboutUs.html"><li style="margin-bottom: 1em">About Us</li></a>
+                    <a href="T&C.html"><li style="margin-bottom: 1em">T&C</li></a>
+                    <a href="Privacy.html"><li style="margin-bottom: 1em">Privacy Policy</li></a>
+                    <a href="FAQ.html"><li style="margin-bottom: 1em">FAQ</li></a>
+                </ul>
+            </div>
+        
+        
+            <div class="footer-section contact-form" style="flex:2">
+                <h2 style="margin-bottom: 0.3em;">Get Snacks News and Deals</h2>
+                <br>
+                <small><i>* indicates required field</I></small>
+                <form action="index.html" method="post">
+                    <br>
+                    <p>E-mail*</p>
+                    <input type="email" name="email" class="text-input contact-input" style="width:350px" placeholder="Your email address..." required><br><br>
+                    <input type="checkbox" name="check" value="1" required>&nbsp;By checking this box, I agree to receive emails from trEAT*<br><br>
+                    <button type="submit" class="btn btn-big contact-btn">
+                        <b>Subscribe</b>
+                    </button>
+                </form>	
+            </div>
+        
+            <div class="footer-bottom">
+                <small><i>Copyright &copy; 2019 trEAT. All Rights Reserved.</i></small>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

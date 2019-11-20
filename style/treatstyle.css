@@ -139,7 +139,86 @@ input[type=text], input[type=password], input[type=email], input[type=number], s
 	cursor: pointer;
 }
 
-
+body{
+    background-color: #ffebe6;
+}
+#right-col{
+    padding-bottom: 2.5rem;
+    margin-left: 155px;
+    margin-right: 155px;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    border: 5px;
+    background-color: #ffebe6;
+}
+.container1{
+    display: block;
+    margin-left: 50px;
+	margin-right: 50px;
+	margin-bottom: 50px;
+    text-align: justify;
+    line-height: 1.6;
+}
+.container2{
+    display: flex;
+    align-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.container3{
+    display: flex;
+    justify-content: space-between;
+}
+.consnacks{
+    display: inline-block;
+	margin: 50px;
+    width: 75%;
+    padding: 1em;
+}
+.img{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+    padding: 1em;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+}
+.img2{
+    display: inline-block;
+    margin: 70px;
+    padding: 30px;
+    border: 3px solid black;
+}
+.buynow{
+    display: flex;
+    justify-content: flex-end;
+}
+.button2{
+    border: none;
+    padding: 14px 28px;
+    cursor: pointer;
+    font-size: 16px;
+    white-space: nowrap;
+}
+.quantity{
+    display: flex;
+    align-items: baseline;
+	padding-top: 20px;
+}
+.quantity input{
+    text-align: center;
+	width: 60px;
+	height: 30px;
+    font-size: 16px;
+    color: #43484D;
+}
+button:focus,
+    input:focus{
+    outline:0;
+}
 
 
 
