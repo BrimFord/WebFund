@@ -58,20 +58,19 @@ input[type=text], input[type=password], input[type=email], input[type=number], s
 
 
 
-button {
+.button {
 	background-color: #f1f1f1;
+	justify-content: center;
 	border: 0.5px solid;
 	font-size: medium;
 	border-radius: 7px;
 	color: #4CAF50;
-	padding: 14px 20px;
-	margin: 8px 0;
+	padding: 20px;
 	cursor: pointer;
-	width: 100%;
 	transition-duration: 0.5s;
 	}
 
-button:hover{
+.button:hover{
 	background-color: #4CAF50;
 	color: white;
 	opacity: 1;
@@ -79,9 +78,7 @@ button:hover{
 
 
 .cancelbtn {
-	padding: 14px 20px;
 	color: #f04343;
-	border-color: #f04343;
 	margin-right: 10px;
 	}
 
@@ -93,7 +90,7 @@ button:hover{
 
 .cancelbtn, .signupbtn {
 	float: right;
-	width: 25%;
+	width: 25% !important;
 	}
 
 
@@ -119,7 +116,7 @@ button:hover{
 
 /* Clear floats */
 .clearfix::after {
-	content: "";
+	content: "" ;
 	clear: both;
 	display: table;
 	}

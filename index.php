@@ -1,19 +1,28 @@
+<?php
+  session_start();
+  if(isset($_SESSION['user_email']) && isset($_SESSION['password'])) {
+    echo "Anything you guys want to put";
+    }
+    else{
+        echo "No session!!";
+}?>
 <!DOCTYPE html>
 <html>
+
+
 <head>
-      <link rel="stylesheet" type="text/css" href="snacks.css">
+      <link rel="stylesheet" href="style/header.css">
+      <link rel="stylesheet" href="flavour.css">
 	  <link rel="stylesheet" type="text/css" href="style/carousel.css">
-	  <link rel="stylesheet" type="text/css" href="style/treatstyle.css">
-    
+	  <link rel="stylesheet" type="text/css" href="treatstyle.css">
+
         <script src="script/carousel.js"></script>
         <script src="script/header.js"></script>
-
   <title>Index</title>
   <style>
     .container3{
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: flex-end;
         border: 5px;
     }
     .button{
@@ -29,8 +38,7 @@
         display: inline-block;
         margin: 20px;
         padding: 1em;
-        color: black;
-        font-family: Montserrat,Arial,sans-serif;
+        background-color: darkgray;
     }
 
 </style>
@@ -42,26 +50,31 @@
     <div id="header" style="z-index: 5">
 
             <!--Logo-->
-            <div><a href="index.html"> <img src="treatlogo.png" width="150px" height="100px" style="margin: 0 10px 0 15px;"></a></div>
-            
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="MainStorePage.html">Store</a></li>
-                <li><a href="AboutUs.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            
+            <div><a href="index.html" onclick="window.location.reload(true);"> <img src="treatlogo.png" width="150px" height="100px"></a></div>
+
+            <!--Search Bar & Search Icon-->
+            <div style="width: 70%; margin-top: 17px;">
+                <input type="text" placeholder="Search.." style="width: 90%; border-radius: 5px;margin-right: 15px;">
+                <input type="image" src="img/search.svg" alt="Submit" style="width: 27px; filter:invert(1); position: absolute; top: 38px;">
+            </div>
+
+            <!--Cart Icon-->
+            <div><img src="img/cart.svg" alt="cart" class="icon" onclick="document.getElementById('PopUpCart').style.display = 'block'" ></div>
+
             <!--User/Account Icon-->
-            <div onclick="document.getElementById('PopUpForm').style.display='block'" style="position: absolute; right: 50px;"><img src="img/user_circle.svg" alt="user" class="icon"></div>
+            <div onclick="document.getElementById('PopUpForm').style.display='block'" style="width:auto; position: relative; left: 17px;"><img src="img/user_circle.svg" alt="user" class="icon"></div>
         </div>
 
 
         <!--Pop-up Register & Login Form-->
-        <div id="PopUpForm" class="PopUpContainer" onclick="NoPopUp()">
+        <div id="PopUpForm" class="modal" onclick="NoPopUp()">
+
+            <!-- X Close Pop-up Form-->
+            <span onclick="window.close()" class="close" title="Close Modal">&times;</span>
 
             <!--REGISTER FORM-->
-            <form action="/handling.php" method="POST" class="PopUpContent" id="accountForm" onsubmit="return validateForm()">
-                    <div style="padding: 15px;">
+            <form action="php/handling.php" method="POST" class="modal-content" id="accountForm" onsubmit="return validateForm()">
+                    <div class="padding">
 
                         <!--SIGN UP & LOGIN Headings-->
                         <div style="overflow: auto;">
@@ -74,31 +87,31 @@
                         <!--REGISTER FORM FIELDS-->
                         <div>
                             <label for="user_name">Username: </label><br>
-                            <input type="text" id="user_name" name="user_name" placeholder="Full Name">
+                            <input type="text" id="user_name" name="user_name">
 
                             <br><br>
 
-                            <label for="emailReg">E-mail:</label><br>
-                            <input type="email" id="emailReg" name="emailReg" placeholder="example@google.com">
+                            <label for="email">E-mail:</label><br>
+                            <input type="email" id="email" name="email" placeholder="example@google.com">
 
                             <br><br>
-                            
-                            <label for="passwordReg">Password:</label><br>
-                            <input type="password" id="passwordReg" name="passwordReg" style="width: 93%">
+
+                            <label for="password">Password:</label><br>
+                            <input type="password" id="passwordReg" name="password" style="width: 93%" required>
                             <img src="img/eye_slash.svg" alt="show" class="psw_icon" onclick="showPasswordReg()" id="psw_icon_reg"><br>
 
                             <br><br>
-                        
+
                             <label for="address1">Address Line 1: </label>
-                            <input type="text" name="address1">
-                        
+                            <input type="text" name="address1" required>
+
                             <br><br>
-                        
+
                             <label for="address2">Address Line 2: </label>
                             <input type="text" name="address2">
-                        
+
                             <br><br>
-                        
+
                             <label for="postcode">Postcode: </label><br>
                             <input type="number" name="postcode" pattern="[0-9]{5}">
 
@@ -112,8 +125,8 @@
 
                         <!--Create Account & Cancel Button-->
                         <div class="clearfix">
-                            <button type="submit" class="button signupbtn">Create Account</button>
-                            <button type="button" class="button cancelbtn" onclick="window.close()">Cancel</button>
+                            <button type="submit" class="signupbtn">Create Account</button>
+                            <button type="button" class="cancelbtn" onclick="window.close()">Cancel</button>
                         </div>
                     </div>
                 </form>
@@ -121,8 +134,8 @@
 
 
                 <!--LOGIN FORM-->
-                <form action="/handling.php" method="POST" class="PopUpContent" id="loginForm" onsubmit="return validateFormLogin()" style="display: none;">
-                        <div style="padding: 15px;">
+                <form action="php/check.php" method="POST" class="modal-content" id="loginForm" onsubmit="return validateFormLogin()" style="display: none;">
+                        <div class="padding">
 
                                 <!--SIGN UP & LOGIN Headings-->
                                 <div style="overflow: auto;">
@@ -133,21 +146,21 @@
                                 <br><br>
 
                         <!--LOGIN FORM FIELDS-->
-                        <label for="emailLogin">E-mail:</label><br>
-                        <input type="email" id="emailLogin" name="emailLogin" placeholder="example@google.com">
+                        <label for="email">E-mail:</label><br>
+                        <input type="email" id="email" name="user_email" placeholder="example@google.com">
 
                         <br><br>
 
-                        <label for="passwordLogin">Password:</label><br>
-                        <input type="password" id="passwordLogin" name="passwordLogin" style="width: 93%">
+                        <label for="password">Password:</label><br>
+                        <input type="password" id="passwordLogin" name="password" style="width: 93%" required>
                         <img src="img/eye_slash.svg" alt="show" class="psw_icon" onclick="showPasswordLogin()" id="psw_icon_login"><br>
 
                         <input type="checkbox" name="remember" style="margin-bottom:15px"> Remember Me
 
                         <!--Create Account & Cancel Button-->
                         <div class="clearfix">
-                                <button type="submit" class="button signupbtn">Login</button>
-                                <button type="button" class="button cancelbtn" onclick="window.close()">Cancel</button>
+                                <button type="submit" class="signupbtn">Login</button>
+                                <button type="button" class="cancelbtn" onclick="window.close()">Cancel</button>
                         </div>
                     </div>
                 </form>
@@ -155,24 +168,60 @@
 
 
 
-    <br>
-    <br>
-    
-    
-    
+        <!--CHECKOUT-->
+        <div id="PopUpCart" class="modal" onclick="NoPopUpCart()">
+                <div class="padding modal-content">
+
+                    <!--CHECKOUT Headings-->
+                    <div>
+                            <h1 style="display: inline-block;">Checkout</h1>
+                        </div>
+                        <br><br>
+
+                        <!---->
+                        <div>
+                            <label for="method">Payment Method: </label>
+                            <br>
+                            <select name="method" id="method" style="width: 100%;" onchange="payment()">
+                                <option value="" disabled selected>--SELECT--</option>
+                                <option value="cod">Cash on Delivery</option>
+                                <option value="card">Credit/Debit Card</option>
+                            </select>
+
+                            <br><br>
+
+                            <label for="addressShipping">Shipping Address: </label>
+                            <input type="text" name="addressShipping"><br>
+                            <input type="checkbox" name="addressUser" style="margin-bottom:15px"> Same as profile's address
+
+                            <br><br>
+
+                            <div id="card" style="display: none">
+                                <h1>Accepted Payment</h1><br><br>
+
+                                <label for="postcode">Card Number: </label><br>
+                                <input type="number" name="cardNum" pattern="[0-9]{14}">
+
+
+                            </div>
+                        </div>
+                </div>
+        </div>
+
+
         <!-- Carousel -->
-        <div class ="main-banner" id = "main-banner" style="border-radius: 7px;">
+        <div class ="main-banner" id = "main-banner" >
           <div class = "imgbanbtn imgbanbtn-prev" id="imgbanbtn-prev" >
-              
+
           </div>
-          <a href="JapanSnacks.html">
+          <a href="index.html">
           <div class ="imgban" id = "imgban3">
             <div class = "imgban-box">
               <h2></h2>
             </div>
           </div>
         </a>
-          <a href="MalaysianSnacks.html"><div class ="imgban" id = "imgban2">
+          <a href="something.html"><div class ="imgban" id = "imgban2">
             <div class = "imgban-box">
               <h2></h2>
             </div>
@@ -190,29 +239,28 @@
 
 
   <div id="right-col" style="border-radius: 6px;">
-    <span><h1>Countries</h1></span>
+    <h1>Categories</h1>
     <div class="container" >
         <a href="JapanSnacks.html"><div class="imgc"><img src="Japan.svg" width="150px" height="150px"><p>Japan</p></div></a>
         <a href="KoreanSnacks.html"><div class="imgc"><img src="SouthKorea.svg" width="150px" height="150px"><p>South Korea</p></div></a>
         <a href="ThailandSnacks.html"><div class="imgc"><img src="Thailand.svg" width="150px" height="150px"><p>Thailand</p></div></a>
         <a href="ChinaSnacks.html"><div class="imgc"><img src="China.svg" width="150px" height="150px"><p>China</p></div></a>
-        <a href="MalaysianSnacks.html"><div class="imgc"><img src="Malaysia.svg" width="150px" height="150px"><p>Malaysia</p></div></a>
-        
+        <a href="MalaysianSnacks"><div class="imgc"><img src="Malaysia.svg" width="150px" height="150px"><p>Malaysia</p></div></a>
+        <div><a href="MainStorePage.html"><button class="button">See More</button></a></div>
     </div>
   </div>
 
 
   <br><br>
-  <div id="right-col">
+<div id="right-col">
+    <h1>Sweet</h1>
     <div class="container3">
-        <h1>Categories</h1>
         <div class="button">
-            <a href="MainStorePage.html">
-                <button class="button">See All</button>
+            <a href="sweet.html">
+                <button class="button">See More</button>
             </a>
         </div>
     </div>
-    <h1>Sweet</h1><br>
     <div class="container">
         <div class="img">
             <a href="japan(sweet1).html">
@@ -221,12 +269,12 @@
         </div>
         <div class="img">
             <a href="korea(sweet1).html">
-                <img src="korea(sweet1).png" width="130px" height="200px"><p>Lotto Pepero Almond & Chocolate Sticks</p>
+                <img src="korea(sweet1).png" width="230px" height="200px"><p>LOTTE Pepero</p>
             </a>
         </div>
         <div class="img">
             <a href="thai(sweet1).html">
-                <img src="thai(sweet1).png" width="250px" height="200px"><p>Euro Marble Cake</p>
+                <img src="thai(sweet1).png" width="200px" height="200px"><p>Euro Cake</p>
             </a>
         </div>
         <div class="img">
@@ -236,11 +284,18 @@
         </div>
         <div class="img">
             <a href="msia(sweet1).html">
-                <img src="msia(sweet1).png" width="180px" height="200px"><p>Iced Gems Biscuits</p>
+                <img src="msia(sweet1).png" width="180px" height="200px"><p>Iced Gems</p>
             </a>
         </div>
     </div>
-    <br><h1>Sour</h1><br>
+    <h1>Sour</h1>
+    <div class="container3">
+        <div class="button">
+            <a href="sour.html">
+                <button class="button">See More</button>
+            </a>
+        </div>
+    </div>
     <div class="container">
         <div class="img">
             <a href="japan(sour1).html">
@@ -254,40 +309,47 @@
         </div>
         <div class="img">
             <a href="thai(sour1).html">
-                <img src="thai(sour1).png" width="180px" height="200px"><p>Strawberry Rip Rolls</p>
+                <img src="thai(sour1).png" width="200px" height="200px"><p>Rip Rolls</p>
             </a>
         </div>
         <div class="img">
             <a href="china(sour1).html">
-                <img src="china(sour1).jpg" width="200px" height="200px"><p>Li Hing Mui Drops</p>
+                <img src="china(sour1).jpg" width="200px" height="200px"><p>Tang Hu Lu</p>
             </a>
         </div>
         <div class="img">
-            <a href="msia(sour1).html">
-                <img src="msia(sour1).png" width="150px" height="200px"><p>Lot 100 Sour+ Blackcurrant Gummy</p>
+            <a href="msia(sou1).html">
+                <img src="msia(sou1).png" width="200px" height="200px"><p>Lot 100 Sour+ Gummy</p>
             </a>
         </div>
     </div>
-    <br><h1>Salty</h1><br>
+    <h1>Salty</h1>
+    <div class="container3">
+        <div class="button">
+            <a href="salty.html">
+                <button class="button">See More</button>
+            </a>
+        </div>
+    </div>
     <div class="container">
         <div class="img">
             <a href="japan(salty1).html">
-                <img src="japan(salty1).png" width="150px" height="200px"><p>Calbee Seaweed & Salt Chips</p>
+                <img src="japan(salty1).png" width="150px" height="200px"><p>Seaweed Salt Chips</p>
             </a>
         </div>
         <div class="img">
             <a href="korea(salty1).html">
-                <img src="korea(salty1).png" width="180px" height="200px"><p>Crab Chips</p>
+                <img src="korea(salty1).png" width="200px" height="200px"><p>Crab Chips</p>
             </a>
         </div>
         <div class="img">
             <a href="thai(salty1).html">
-                <img src="thai(salty1).png" width="200px" height="200px"><p>Lays Assorted Nori Seaweed Potato Chips</p>
+                <img src="thai(salty1).png" width="200px" height="200px"><p>Lays Assorted Potato Chips</p>
             </a>
         </div>
         <div class="img">
             <a href="china(salty1).html">
-                <img src="china(salty1).jpg" width="200px" height="200px"><p>Wang Wang Snow Cookies</p>
+                <img src="china(salty1).png" width="200px" height="200px"><p>Wang Wang Snow Cookies</p>
             </a>
         </div>
         <div class="img">
@@ -296,7 +358,14 @@
             </a>
         </div>
     </div>
-    <br><h1>Spicy</h1><br>
+    <h1>Spicy</h1>
+<div class="container3">
+        <div class="button">
+            <a href="spicy.html">
+                <button class="button">See More</button>
+            </a>
+        </div>
+    </div>
     <div class="container">
         <div class="img">
             <a href="japan(spicy1).html">
@@ -310,12 +379,12 @@
         </div>
         <div class="img">
             <a href="thai(spicy1).html">
-                <img src="thai(spicy1).png" width="150px" height="200px"><p>Bento Squid Seafood Snack</p>
+                <img src="thai(spicy1).png" width="200px" height="200px"><p>Bento Squid Seafood Snack</p>
             </a>
         </div>
         <div class="img">
             <a href="china(spicy1).html">
-                <img src="china(spicy1).jpg" width="150px" height="200px"><p>China Spicy Strips</p>
+                <img src="china(spicy1).jpg" width="250px" height="200px"><p>China Spicy Strips</p>
             </a>
         </div>
         <div class="img">
@@ -356,56 +425,37 @@
 </script>
 
 
-<footer class="footer">
-  <div class="footer-content">
+<footer>
+<ul class="footerul">
 
+<div class='footerli'>
+<h4 style="margin-bottom: 1em; font-size: 20px;">Customer Service</h4>
+	<li style="margin-bottom: 1em"><a href="contact.html">Contact Us</a></li>
+	<li style="margin-bottom: 1em"><a href="FAQ.html">FAQ</a></li>
+	<li><a href="HowToBuy.html">How To Buy</a></li>
 
-    <div class="footer-section about" style="flex:2">
-	<h1 style="margin-bottom: 0.5em;"><span>tr</span>EAT</h1>
-	<p style="font-size:1.1em; line-height: 1.6; text-align:justify">trEAT is an online snacks shopping site founded in 2019 by individuals who thrive to supply good value global snacks to meet the discerning appetite
-of every customer for quality food products and snacks for their everyday needs.
-	</p>
-	<br>
-	<h3 style="margin-bottom: 1em;">Follow Us On</h3>
-	<ul>
-		<li style="display:inline; margin-right: 1em"><img src="fb.png" width="30px" height="30px"></li>
-	<li style="display:inline; margin-right: 1em"><img src="insta.png" width="30px" height="30px"></li>
-	<li style="display:inline"><img src="twitterr.png" width="30px" height="30px"></li>
-	</ul>
-    </div>
-
-
-    <div class="footer-section links" style="flex:1">
-	<h2 style="margin-bottom: 1.5em;">Links</h2>
-	<ul>
-	  <a href="AboutUs.html"><li style="margin-bottom: 1em">About Us</li></a>
-	  <a href="T&C.html"><li style="margin-bottom: 1em">T&C</li></a>
-	  <a href="Privacy.html"><li style="margin-bottom: 1em">Privacy Policy</li></a>
-	  <a href="FAQ.html"><li style="margin-bottom: 1em">FAQ</li></a>
-	  <a href="HowToBuy.html"><li style="margin-bottom: 1em">How To Buy</li></a>
-
-	</ul>
-    </div>
-
-
-    <div class="footer-section contact-form" style="flex:2">
-	<h2 style="margin-bottom: 0.5em;">Contact Us</h2>
-	<br>
-	<form action="index.html" method="post">
-		<input type="text" name="name" class="text-input contact-input" style="width:250px" placeholder="Your name...">
-		<input type="email" name="email" class="text-input contact-input" style="width:350px" placeholder="Your email address...">
-		<textarea rows="4" cols="60" name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
-		<button type="submit" class="btn btn-big contact-btn">
-			Send
-		</button>
-	</form>	
-    </div>
-
-  <div class="footer-bottom">
-	<small><i>Copyright &copy; 2019 trEAT. All Rights Reserved.</i></small>
-  </div>
 
 </div>
-</footer>
+</ul>
 
+<ul class="footerul">
+<div class='footerli'>
+	<h4 style="margin-bottom: 1em; font-size: 20px">trEAT</h4>
+	<li style="margin-bottom: 1em"><a href="AboutUs.html">About Us</a></li>
+	<li style="margin-bottom: 1em"><a href="T&C.html">T&C</a></li>
+	<li style="margin-bottom: 1em"><a href="Privacy.html">Privacy Policy</a></li>
+
+</div>
+</ul>
+<ul class="footerul">
+<div class='footerli'>
+	<h4 style="margin-bottom: 1.5em; font-size: 20px">Social Media</h4>
+	<li style="display:inline; margin-right: 1em"><img src="fb.png" width="30px" height="30px"></li>
+	<li style="display:inline; margin-right: 1em"><img src="insta.png" width="30px" height="30px"></li>
+	<li style="display:inline"><img src="twitterr.png" width="30px" height="30px"></li>
+	<p style="margin-top: 1.5em"><small><i>Copyright &copy; 2019 trEAT. All Rights Reserved.</i></small></p>
+</div>
+</ul>
+
+</footer>
 </html>

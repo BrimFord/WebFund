@@ -1,0 +1,79 @@
+#right-col{
+    padding-bottom: 2.5rem;
+    margin-left: 155px;
+    margin-right: 155px;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    border: 5px;
+    background-color: #ffebe6;
+}
+.consnacks{
+    display: inline-block;
+    border: 5px;
+    margin: 70px;
+    margin-left: 30px;
+    padding: 1em;
+}
+.container1{
+    display: block;
+}
+.img{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+    padding: 1em;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+}
+.img2{
+    display: inline-block;
+    margin: 70px;
+    padding: 30px;
+    border: 3px solid black;
+}
+.button{
+    border: none;
+    padding: 14px 28px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 16px;
+    white-space: nowrap;
+}
+.quantity{
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    margin-right: 60px;
+}
+.quantity input{
+    -webkit-appearance: none;
+    border: none;
+    text-align: center;
+    width: 32px;
+    font-size: 16px;
+    color: #43484D;
+    font-weight: 300;
+    height: 30px;
+}
+button[class*=btn]{
+    width: 30px;
+    height: 30px;
+    background-color: #E1E8EE;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+.plus-btn img{
+    margin-top: 2px;
+}
+.minus-btn img{
+    margin-bottom: 3px;
+}
+button:focus,
+    input:focus{
+    outline:0;
+}

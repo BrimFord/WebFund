@@ -65,18 +65,18 @@ body{
 
 .imgbanbtn-prev{
 	left:5px;
-	background-image: url("../backbutton.png");
+	background-image: url("../img/left.svg");
 	z-index: 3;
-	background-size: 60%;
+	background-size: 40%;
 	background-position: center;
 	background-repeat: no-repeat;
 
 }
 .imgbanbtn-next{
 	right:5px;
-	background-image: url("../nextbutton.png");
+	background-image: url("../img/right.svg");
 	z-index: 3;
-	background-size: 60%;
+	background-size: 40%;
 	background-position: center;
 	background-repeat: no-repeat;
 
