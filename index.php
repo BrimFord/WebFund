@@ -68,7 +68,9 @@
 
                 }
                 else{
-                    echo "<h1>Icon Hello</h1>";
+                  echo "<div onclick=";
+                  echo "document.getElementById('PopUpLog').style.display='block' style='position: absolute; right: 50px;'><img src='img/user_circle.svg' alt='user' class='icon'></div>";
+
             }?>
 
         </div>
@@ -170,6 +172,29 @@
                     </div>
                 </form>
         </div>
+        <!--NOT ASSIGNED TO ANYTHING YET-->
+            <div id="PopUpLog" class="PopUpContainer" onclick="NoPopUp()" >
+                <form action="/handling.php" method="POST" class="PopUpContent" id="logoutForm">
+
+                    <div style="padding: 15px;">
+
+                            <!--SIGN UP & LOGIN Headings-->
+                            <div style="text-align: center;">
+                                <br><br>
+                                <h1>Logging Out?</h1>
+                                <br><br>
+                            </div>
+                            <br><br>
+
+                <!--Create Account & Cancel Button-->
+                <div class="clearfix">
+                        <button type="submit" class="buttons signupbuttons" onclick="<?php sesssion_destroy();?>">Logout</button>
+                        <button type="button" class="buttons cancelbuttons" onclick="window.close()">Cancel</button>
+                </div>
+                </div>
+                </form>
+            </div>
+
 
 
 
