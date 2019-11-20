@@ -193,36 +193,10 @@ input[type=text], input[type=password], input[type=email], input[type=number], s
 }
 
 
-.footerr {
-	display: flex;
-	justify-content: center;
-	bottom: 0;
-	padding-right: 10px;
-	width: 100%;
-	background-color: #f04343;
-	font-family:Helvetica,Tahoma,Arial,Sans-serif !important;
-}
-
-
-.footerul {
-	flex-direction: row;
-	list-style-type: none;
-}
-
-
-.footerli {
-	color: white;
-	display: block;
-	width: 300px;
-	padding-bottom: 5px;
-	margin: 10px;}
-
-
-
 .footer{
 	background-color: #f04343;
 	color: white;
-	height: 400px;
+	height: 350px;
 	width: 100%;
 	position: relative;
 	font-family:Helvetica,Tahoma,Arial,Sans-serif !important;
@@ -248,7 +222,8 @@ input[type=text], input[type=password], input[type=email], input[type=number], s
 
 .footer .footer-content .links ul a{
 	display: block;
-	margin-bottom: 10px;;
+	margin-bottom: 10px;
+	margin-right: 100px;
 	font-size: 1.2em;
 	color: white;
 }
@@ -262,9 +237,9 @@ input[type=text], input[type=password], input[type=email], input[type=number], s
 
 .footer .footer-content .contact-form .contact-input {
 	background: #e8f4f8;
-	color: white;
+	color: black;
 	margin-bottom: 10px;
-	ling-height: 1.5rem;
+	line-height: 1.5rem;
 	padding: .9rem 1.4rem;
 	border: none;
 }
@@ -294,10 +269,11 @@ input[type=text], input[type=password], input[type=email], input[type=number], s
 
 .btn {
 	padding: .5rem 1rem;
-	background: #006669;
-	color: white;
+	background: #005255 !important;
+	color: #e8f4f8;
 	border: 1px solid transparent;
 	border-radius: .25rem;
+	margin-right: 80px;
 }
 
 .btn-big{
@@ -307,6 +283,24 @@ input[type=text], input[type=password], input[type=email], input[type=number], s
 }
 
 .btn:hover{
-	color: white !important;
-	background: #005255;
+	margin-right: 90px;
+	transition: all.3s;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 400px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 7px;
+  border-radius: 100px;
+}
+
+#myBtn:hover {
+  background-color: #555;
 }

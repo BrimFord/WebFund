@@ -51,9 +51,28 @@
 		</ul>
 </div>
 
-<div class="top">
-	<a href="#top"> <img src="top.png" width="80px" height="60px"></a>
-</div>
+<!--totopbutton-->
+
+<button onclick="topFunction()" id="myBtn" title="Go to top"><img src="top.png" width="70px" height="55px"></button>
+
+<script>
+var mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
 
 <div id="page">
 <div id="rc">
@@ -190,11 +209,13 @@ Please allow your bank some time to update the final charge on your statement af
 </body>
 </div>
 
+<!--Footer-->
+
 <footer class="footer">
   <div class="footer-content">
 
 
-    <div class="footer-section about">
+    <div class="footer-section about" style="flex:2">
 	<h1 style="margin-bottom: 0.5em;"><span>tr</span>EAT</h1>
 	<p style="font-size:1.1em; line-height: 1.6; text-align:justify">trEAT is an online snacks shopping site founded in 2019 by individuals who thrive to supply good value global snacks to meet the discerning appetite
 of every customer for quality food products and snacks for their everyday needs.
@@ -209,28 +230,29 @@ of every customer for quality food products and snacks for their everyday needs.
     </div>
 
 
-    <div class="footer-section links">
-	<h2 style="margin-bottom: 1.5em;">Links</h2>
+    <div class="footer-section links" style="flex:1">
+	<h2 style="margin-bottom: 1em;">Links</h2>
 	<ul>
 	  <a href="AboutUs.html"><li style="margin-bottom: 1em">About Us</li></a>
 	  <a href="T&C.html"><li style="margin-bottom: 1em">T&C</li></a>
 	  <a href="Privacy.html"><li style="margin-bottom: 1em">Privacy Policy</li></a>
 	  <a href="FAQ.html"><li style="margin-bottom: 1em">FAQ</li></a>
-	  <a href="HowToBuy.html"><li style="margin-bottom: 1em">How To Buy</li></a>
 
 	</ul>
     </div>
 
 
-    <div class="footer-section contact-form">
-	<h2 style="margin-bottom: 0.5em;">Contact Us</h2>
+    <div class="footer-section contact-form" style="flex:2">
+	<h2 style="margin-bottom: 0.3em;">Get Snacks News and Deals</h2>
 	<br>
+	<small><i>* indicates required field</I></small>
 	<form action="index.html" method="post">
-		<input type="text" name="name" class="text-input contact-input" style="width:250px" placeholder="Your name...">
-		<input type="email" name="email" class="text-input contact-input" style="width:350px" placeholder="Your email address...">
-		<textarea rows="4" cols="60" name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
+		<br>
+		<p>E-mail*</p>
+		<input type="email" name="email" class="text-input contact-input" style="width:350px" placeholder="Your email address..." required><br><br>
+		<input type="checkbox" name="check" value="1" required>&nbsp;By checking this box, I agree to receive emails from trEAT*<br><br>
 		<button type="submit" class="btn btn-big contact-btn">
-			Send
+			<b>Subscribe</b>
 		</button>
 	</form>	
     </div>
@@ -240,4 +262,5 @@ of every customer for quality food products and snacks for their everyday needs.
   </div>
 
 </div>
-</footer></html>
+</footer>
+</html>
