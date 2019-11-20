@@ -62,11 +62,16 @@
         }
 
             function NoPopUp (){
-            var modal = document.getElementById('PopUpForm');
-            if (event.target == modal) {
-                modal.style.display = "none";
+            var RegForm = document.getElementById('PopUpForm');
+            var LogForm = document.getElementById('PopUpLog');
+            
+            if (event.target == RegForm) {
+                RegForm.style.display = "none";
             }
+            if (event.target == LogForm) {
+                LogForm.style.display = "none";
             }
+        }
 
 
             function showPasswordReg() {
@@ -114,6 +119,7 @@
 
           function close(){
               document.getElementById("PopUpForm").style.display='none';
+              document.getElementById("PopUpLog").style.display='none';
           }
 
 
