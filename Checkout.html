@@ -3,6 +3,26 @@
 
 
 
+<div id="header" style="z-index: 5">
+
+    <!--Logo-->
+    <div><a href="index.html"> <img src="treatlogo.png" width="150px" height="100px" style="margin: 0 10px 0 15px;"></a></div>
+    
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="MainStorePage.html">Store</a></li>
+        <li><a href="AboutUs.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    
+    <!--User/Account Icon-->
+    <div onclick="document.getElementById('PopUpForm').style.display='block'" style="position: absolute; right: 50px;"><img src="img/user_circle.svg" alt="user" class="icon"></div>
+</div>
+
+<br><br>
+
+
+
 
     <br><br>
 
@@ -19,6 +39,9 @@
                 <div style="width: 30%; margin: auto;">
                     <label for="method">Payment Method: </label>
                     <br>
+
+
+
                     <select name="method" id="method" style="width: 100%;" onchange="payment()">
                         <option value="" disabled selected>--SELECT--</option>
                         <option value="cod">Cash on Delivery</option>
@@ -34,7 +57,14 @@
                     <br><br><br><br>
                     
                     <div id="card" style="display: none; margin: auto;">
-                        <h3>Accepted Payment</h3><br><br>
+                        <h3>Accepted Payment</h3>
+                        <br><br>
+                        <div>
+                            <img src="img/visa.svg" width="50px" style="margin-right: 20px;">
+                            <img src="img/mastercard.svg" width="50px">
+                        </div>
+                        <br><br>
+
 
                         <label for="postcode">Card Number: </label><br>
                         <input type="number" name="cardNum" pattern="[0-9]{14}">
@@ -57,7 +87,7 @@
 
                     </div>
                     <br>
-                    <button type="submit" class="signupbtn" style="width: 100%;">Purchase</button>
+                    <button type="submit" class="buttons signupbutton" style="width: 100%;">Purchase</button>
 
                 </div>
 
