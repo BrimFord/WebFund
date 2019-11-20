@@ -2,12 +2,29 @@
 <html>
 <head>
 <title>HTB</title>
-<link rel="stylesheet" type="text/css" href="treatstyle.css">
+<link rel="stylesheet" type="text/css" href="style/treatstyle.css">
 </head>
 <body>
 
+        <!--Navigation Bar-->
+		<div id="header" style="z-index: 5">
 
-<div id="rightcol">
+				<!--Logo-->
+				<div><a href="index.html"> <img src="treatlogo.png" width="150px" height="100px" style="margin: 0 10px 0 15px;"></a></div>
+				
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li>Store</li>
+					<li><a href="AboutUs.html">Blog</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+				
+				<!--User/Account Icon-->
+				<div onclick="document.getElementById('PopUpForm').style.display='block'" style="position: absolute; right: 50px;"><img src="img/user_circle.svg" alt="user" class="icon"></div>
+			</div>
+
+<div id="page">
+<div id="rc">
 <h1>How To Buy</h1>
 <p>idk man</p>
 <p>you click</p>
@@ -15,38 +32,57 @@
 <p>you hope for it to arrive</p>
 </body>
 </div>
-
-<div>
-<footer>
-<ul class="footerul">
-
-<div class='footerli'>
-<h4 style="margin-bottom: 1em">Customer Service</h4>
-	<li style="margin-bottom: 1em"><a href="contact.html">Contact Us</a></li>
-	<li style="margin-bottom: 1em"><a href="FAQ.html">FAQ</a></li>
-	<li><a href="HowToBuy.html">How To Buy</a></li>
-
-
 </div>
-</ul>
-<ul class="footerul">
-<div class='footerli'>
-	<h4 style="margin-bottom: 1em">trEAT</h4>
-	<li style="margin-bottom: 1em"><a href="AboutUs.html">About Us</a></li>
-	<li style="margin-bottom: 1em"><a href="T&C.html">T&C</a></li>
-	<li style="margin-bottom: 1em"><a href="Privacy.html">Privacy Policy</a></li>
 
-</div>
-</ul>
-<ul class="footerul">
-<div class='footerli'>
-	<h4 style="margin-bottom: 1.5em">Social Media</h4>
-	<li style="display:inline; margin-right: 1em"><img src="fb.png" width="30px" height="30px"></li>
+<footer class="footer">
+  <div class="footer-content">
+
+
+    <div class="footer-section about">
+	<h1 style="margin-bottom: 0.5em;"><span>tr</span>EAT</h1>
+	<p style="font-size:1.1em; line-height: 1.6; text-align:justify">trEAT is an online snacks shopping site founded in 2019 by individuals who thrive to supply good value global snacks to meet the discerning appetite
+of every customer for quality food products and snacks for their everyday needs.
+	</p>
+	<br>
+	<h3 style="margin-bottom: 1em;">Follow Us On</h3>
+	<ul>
+		<li style="display:inline; margin-right: 1em"><img src="fb.png" width="30px" height="30px"></li>
 	<li style="display:inline; margin-right: 1em"><img src="insta.png" width="30px" height="30px"></li>
 	<li style="display:inline"><img src="twitterr.png" width="30px" height="30px"></li>
-	<p style="margin-top: 1.5em"><small><i>Copyright &copy; 2019 trEAT. All Rights Reserved.</i></small></p>
+	</ul>
+    </div>
+
+
+    <div class="footer-section links">
+	<h2 style="margin-bottom: 1.5em;">Links</h2>
+	<ul>
+	  <a href="AboutUs.html"><li style="margin-bottom: 1em">About Us</li></a>
+	  <a href="T&C.html"><li style="margin-bottom: 1em">T&C</li></a>
+	  <a href="Privacy.html"><li style="margin-bottom: 1em">Privacy Policy</li></a>
+	  <a href="FAQ.html"><li style="margin-bottom: 1em">FAQ</li></a>
+	  <a href="HowToBuy.html"><li style="margin-bottom: 1em">How To Buy</li></a>
+
+	</ul>
+    </div>
+
+
+    <div class="footer-section contact-form">
+	<h2 style="margin-bottom: 0.5em;">Contact Us</h2>
+	<br>
+	<form action="index.html" method="post">
+		<input type="text" name="name" class="text-input contact-input" style="width:250px" placeholder="Your name...">
+		<input type="email" name="email" class="text-input contact-input" style="width:350px" placeholder="Your email address...">
+		<textarea rows="4" cols="60" name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
+		<button type="submit" class="btn btn-big contact-btn">
+			Send
+		</button>
+	</form>	
+    </div>
+
+  <div class="footer-bottom">
+	<small><i>Copyright &copy; 2019 trEAT. All Rights Reserved.</i></small>
+  </div>
+
 </div>
-</ul>
 </footer>
-</div>
 </html>
