@@ -116,8 +116,8 @@
 
                         <!--Create Account & Cancel Button-->
                         <div class="clearfix">
-                            <button type="submit" class="button signupbtn">Create Account</button>
-                            <button type="button" class="button cancelbtn" onclick="window.close()">Cancel</button>
+                            <button type="submit" class="buttons signupbuttons">Create Account</button>
+                            <button type="button" class="buttons cancelbuttons" onclick="window.close()">Cancel</button>
                         </div>
                     </div>
                 </form>
@@ -150,12 +150,37 @@
 
                         <!--Create Account & Cancel Button-->
                         <div class="clearfix">
-                                <button type="submit" class="button signupbtn">Login</button>
-                                <button type="button" class="button cancelbtn" onclick="window.close()">Cancel</button>
+                                <button type="submit" class="buttons signupbuttons">Login</button>
+                                <button type="button" class="buttons cancelbuttons" onclick="window.close()">Cancel</button>
                         </div>
                     </div>
                 </form>
         </div>
+
+
+
+        <!--NOT ASSIGNED TO ANYTHING YET-->
+            <div id="PopUpLog" class="PopUpContainer" onclick="NoPopUp()" >
+                <form action="/handling.php" method="POST" class="PopUpContent" id="logoutForm">
+                    
+                    <div style="padding: 15px;">
+
+                            <!--SIGN UP & LOGIN Headings-->
+                            <div style="text-align: center;">
+                                <br><br>
+                                <h1>Logging Out?</h1>
+                                <br><br>
+                            </div>
+                            <br><br>
+
+                <!--Create Account & Cancel Button-->
+                <div class="clearfix">
+                        <button type="submit" class="buttons signupbuttons" >Login</button>
+                        <button type="button" class="buttons cancelbuttons" onclick="window.close()">Cancel</button>
+                </div>
+                </div>
+                </form>
+            </div>
 
 
 
@@ -205,12 +230,10 @@
     
   </div>
 
-
-  <br><br>
   <div id="right-col">
     <div class="container3">
         <h1>Categories</h1>
-        <div class="button">
+        <div class="button2">
             <a href="MainStorePage.html">
                 <button class="button">See All</button>
             </a>
