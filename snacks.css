@@ -23,6 +23,10 @@ body{
     margin-left: 50px;
     margin-right: 50px;
 }
+.container3{
+    display: flex;
+    justify-content: space-between;
+}
 .consnacks{
     display: inline-block;
     margin: 50px;
