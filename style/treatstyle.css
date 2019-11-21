@@ -258,6 +258,13 @@ button:focus,
 }
 
 
+.welcomeMSG{
+	margin-left: 320px;
+	font-size: 40px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-style: italic;
+}
+
 
 
 
