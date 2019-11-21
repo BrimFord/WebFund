@@ -1,82 +1,88 @@
-            function validateForm(){
+        function validateForm(){
 
-            var name = document.forms["accountForm"]["user_name"].value;
-            var email = document.forms["accountForm"]["emailReg"].value;
-            var password = document.forms["accountForm"]["passwordReg"].value;
-            var address = document.forms["accountForm"]["address1"].value;
-            var postcode = document.forms["accountForm"]["postcode"].value;
-            var state = document.forms["accountForm"]["state"].value;
-            atpos = email.indexOf("@");
-            dotpos = email.lastIndexOf(".");
+            var name = document.getElementById("user_name").value;
+            var email = document.getElementById("emailReg").value;
+            var password = document.getElementById("passwordReg").value;
+            var address = document.getElementById("address1").value;
+            var postcode = document.getElementById("postcode").value;
+            var state = document.getElementById("state").value;
 
 
             if (name == "") {
-            alert("Name field can't be empty!");
-            document.getElementById("user_name").focus();
-            return false;
-            }
+                alert("Name field can't be empty!");
+                document.getElementById("user_name").focus();
+                return false;
+                }
 
-            if (atpos < 1 || ( dotpos - atpos < 2 )) {
-            alert("Please enter email in correct format: example@mail.com");
-            document.getElementById("emailReg").focus();
-            return false;
-            }
+            if (email == "") {
+                alert("Please enter email in correct format: example@mail.com");
+                document.getElementById("emailReg").focus();
+                return false;
+                }
 
             if (password == "") {
-            alert("You don't like security?");
-            document.getElementById("passwordReg").focus();
-            return false;
-            }
+                alert("You don't like security?");
+                document.getElementById("passwordReg").focus();
+                return false;
+                }
 
                 
             if (address == "") {
-            alert("Address can't be empty!");
-            document.getElementById("address1").focus();
-            return false;
-            }
+                alert("Address can't be empty!");
+                document.getElementById("address1").focus();
+                return false;
+                }
 
 
             if( postcode == "" || postcode.length != 5 ) {
-            alert( "Please provide a postcode in the format #####." );
-            document.getElementById("postcode").focus();
-            return false;
-            }
+                alert( "Please provide a postcode in the format #####." );
+                document.getElementById("postcode").focus();
+                return false;
+                }
+
 
             if (state == "") {
-            alert("State can't be empty!");
-            document.getElementById("state").focus();
-            return false;
-            }
+                alert("State can't be empty!");
+                document.getElementById("state").focus();
+                return false;
+                }
 
 
              document.getElementById("accountForm").submit();
         }
 
+
+
+
+
         function validateFormLogin(){
 
-             var email = document.forms["loginForm"]["emailLogin"].value;
-             var password = document.forms["loginForm"]["passwordLogin"].value;
-            atpos = email.indexOf("@");
-            dotpos = email.lastIndexOf(".");
+             var email = document.getElementById("emailLogin").value;
+             var password = document.getElementById("passwordLogin").value;
 
             
-            if (atpos < 1 || ( dotpos - atpos < 2 )) {
-            alert("Please enter email in correct format: example@mail.com")
-            document.getElementById("emailLogin").focus();
-            return false;
-            }
+            if (email == "") {
+                alert("Please enter email in correct format: example@mail.com")
+                document.getElementById("emailLogin").focus();
+                return false;
+                }
+
 
             if (password == "") {
-            alert("Enter password!");
-            document.getElementById("passwordLogin").focus();
-            return false;
-            }
+                alert("Enter password!");
+                document.getElementById("passwordLogin").focus();
+                return false;
+                }
 
                 document.getElementById("loginForm").submit();
 
         }
 
-            function NoPopUp (){
+
+
+
+
+        function NoPopUp (){
             var RegForm = document.getElementById('PopUpForm');
             var LogForm = document.getElementById('PopUpLog');
             
@@ -89,60 +95,85 @@
         }
 
 
-            function showPasswordReg() {
+
+
+
+        function showPasswordReg() {
             var password = document.getElementById("passwordReg");
             var icon = document.getElementById("psw_icon_reg");
+
             if (password.type === "password") {
                 password.type = "text";
                 icon.src = "img/eye.svg";
             } else {
                 password.type = "password";
                 icon.src = "img/eye_slash.svg";
-            }
+                }
             }
 
-            function showPasswordLogin() {
-                var password = document.getElementById("passwordLogin");
-                var icon = document.getElementById("psw_icon_login");
+
+
+
+
+        function showPasswordLogin() {
+            var password = document.getElementById("passwordLogin");
+            var icon = document.getElementById("psw_icon_login");
+
                 if (password.type === "password") {
                     password.type = "text";
                     icon.src = "img/eye.svg";
                 } else {
                     password.type = "password";
                     icon.src = "img/eye_slash.svg";
+                    }
                 }
-                }
 
-            function signupForm(){
-                document.getElementById('accountForm').style.display='block';
-                document.getElementById('loginForm').style.display='none';
-            }
 
-            function loginForm(){
-                document.getElementById('accountForm').style.display='none';
-                document.getElementById('loginForm').style.display='block';
-            }
 
-            function payment(){
+
+
+        function signupForm(){
+            document.getElementById('accountForm').style.display='block';
+            document.getElementById('loginForm').style.display='none';
+        }
+
+
+
+
+
+        function loginForm(){
+            document.getElementById('accountForm').style.display='none';
+            document.getElementById('loginForm').style.display='block';
+        }
+
+
+
+
+
+        function payment(){
                     if(document.getElementById('method').value == "card") {
                         document.getElementById('card').style.display = 'block';
                     } else if (document.getElementById('method').value == "cod"){
                         document.getElementById('card').style.display = 'none';
                     }
                     
-          }
+            }
 
-          function close(){
+
+
+
+
+        function close(){
               document.getElementById("PopUpForm").style.display='none';
               document.getElementById("PopUpLog").style.display='none';
           }
 
           
 
+
+
         function validateSubscribe(){
-            var email = document.forms["subscribeForm"]["emailSubscribe"].value;
-            atpos = email.indexOf("@");
-            dotpos = email.lastIndexOf(".");
+            var email = document.getElementById("emailSubscribe").value;
 
             function subscribe(){
                 setTimeout(function(){
@@ -151,25 +182,28 @@
                     }, 1000);
             }
 
-            if (atpos < 1 || ( dotpos - atpos < 2 )) {
+            if (email == "") {
                 alert("Please enter email in correct format: example@mail.com");
                 document.getElementById("emailSubscribe").focus();
                 return false;
-                }
-            
+            }
+        
             
             if (subscribeForm.checkSubscribe.checked == false){
-            alert ('You must agree to the terms!');
-            return false;
+                alert ('You must agree to the terms!');
+                return false;
             }
 
-                subscribe();
+            subscribe();
         }
 
 
+
+
+
         function validateCheckout(){
-            var address = document.forms["checkoutForm"]["addressShipping"].value;
-            var payment = document.forms["checkoutForm"]["method"].value;
+            var address = document.getElementById("addressShipping").value;
+            var payment = document.getElementById("method").value;
         
             if (payment == "") {
                 alert("Choose method of payment!");
@@ -187,6 +221,9 @@
         }
 
 
+
+
+        
         function validateCard(){
 
             function timer(){
@@ -196,10 +233,10 @@
                }, 3000);
               }
 
-            var payment = document.forms["checkoutForm"]["method"].value;
-            var card = document.forms["checkoutForm"]["cardNum"].value;
-            var date = document.forms["checkoutForm"]["exp_date"].value;
-            var cvv = document.forms["checkoutForm"]["cvv"].value;
+            var payment = document.getElementById("method").value;
+            var card = document.getElementById("cardNum").value;
+            var date = document.getElementById("exp_date").value;
+            var cvv = document.getElementById("cvv").value;
 
             if  (payment == "card") {
                 if (card == "") {
@@ -213,7 +250,7 @@
                     return false;
                 }
 
-                else if (cvv == "") {
+                else if (cvv == "" || cvv.length != 3 ) {
                     alert("Enter the 3-digits on the back of the card!");
                     document.getElementById("cvv").focus();
                     return false;
