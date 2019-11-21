@@ -30,7 +30,7 @@
             <div id="PopUpForm" class="PopUpContainer" onclick="NoPopUp()">
     
                 <!--REGISTER FORM-->
-                <form action="/handling.php" method="POST" class="PopUpContent" id="accountForm" onsubmit="validateForm()">
+                <form action="/handling.php" method="POST" class="PopUpContent" id="accountForm" >
                         <div style="padding: 15px;">
     
                             <!--SIGN UP & LOGIN Headings-->
@@ -82,7 +82,7 @@
     
                             <!--Create Account & Cancel Button-->
                             <div class="clearfix">
-                                <button type="submit" class="buttons signupbuttons">Create Account</button>
+                                <button type="button" class="buttons signupbuttons" onclick="validateForm()">Create Account</button>
                                 <button type="button" class="buttons cancelbuttons" onclick="window.close()">Cancel</button>
                             </div>
                         </div>
@@ -91,7 +91,7 @@
     
     
                     <!--LOGIN FORM-->
-                    <form action="/handling.php" method="POST" class="PopUpContent" id="loginForm" onsubmit="validateFormLogin()" style="display: none;">
+                    <form action="/handling.php" method="POST" class="PopUpContent" id="loginForm"  style="display: none;">
                             <div style="padding: 15px;">
     
                                     <!--SIGN UP & LOGIN Headings-->
@@ -116,7 +116,7 @@
     
                             <!--Login & Cancel Button-->
                             <div class="clearfix">
-                                    <button type="submit" class="buttons signupbuttons" >Login</button>
+                                    <button type="button" class="buttons signupbuttons" onclick="validateFormLogin()">Login</button>
                                     <button type="button" class="buttons cancelbuttons" onclick="window.close()">Cancel</button>
                             </div>
                         </div>

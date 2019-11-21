@@ -4,6 +4,7 @@
             var email = document.forms["accountForm"]["emailReg"].value;
             var password = document.forms["accountForm"]["passwordReg"].value;
             var address = document.forms["accountForm"]["address1"].value;
+            var postcode = document.forms["accountForm"]["postcode"].value;
             atpos = email.indexOf("@");
             dotpos = email.lastIndexOf(".");
 
@@ -40,7 +41,7 @@
                 document.accountForm.postcode.focus() ;
                 return false;
              }
-
+             document.getElementById("accountForm").submit();
         }
 
         function validateFormLogin(){
@@ -62,6 +63,8 @@
                 document.accountForm.password.focus();
                 return false;
                 }
+
+                document.getElementById("loginForm").submit();
 
         }
 
@@ -137,7 +140,7 @@
                 setTimeout(function(){
                     document.getElementById("subscribe").innerHTML = "<h1 style='text-align: center; margin-top: 115px;'> Thanks for Subscribing!</h1><br><p style='text-align: center;'><i>You won't miss out on amazing deals now.</i></p>";
                     document.getElementById("subscribeForm").submit();
-                    }, 0000);
+                    }, 1000);
             }
 
             if (atpos < 1 || ( dotpos - atpos < 2 )) {
@@ -181,7 +184,7 @@
                 setTimeout(function(){
                   window.location.href = 'index.html';
                   document.getElementById("checkoutForm").submit();
-               }, 5000);
+               }, 3000);
               }
 
             var payment = document.forms["checkoutForm"]["method"].value;
