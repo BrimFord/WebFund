@@ -274,38 +274,59 @@
 
 		</div>
 
-<footer>
-<ul class="footerul">
+<!--Footer-->
 
-<div class='footerli'>
-<h4 style="margin-bottom: 1em; font-size: 20px;">Customer Service</h4>
-	<li style="margin-bottom: 1em"><a href="contact.html">Contact Us</a></li>
-	<li style="margin-bottom: 1em"><a href="FAQ.html">FAQ</a></li>
-	<li><a href="HowToBuy.html">How To Buy</a></li>
+<footer class="footer" style="z-index: 6">
+  <div class="footer-content">
 
 
-</div>
-</ul>
-
-<ul class="footerul">
-<div class='footerli'>
-	<h4 style="margin-bottom: 1em; font-size: 20px">trEAT</h4>
-	<li style="margin-bottom: 1em"><a href="AboutUs.html">About Us</a></li>
-	<li style="margin-bottom: 1em"><a href="T&C.html">T&C</a></li>
-	<li style="margin-bottom: 1em"><a href="Privacy.html">Privacy Policy</a></li>
-
-</div>
-</ul>
-<ul class="footerul">
-<div class='footerli'>
-	<h4 style="margin-bottom: 1.5em; font-size: 20px">Social Media</h4>
-	<li style="display:inline; margin-right: 1em"><img src="fb.svg" width="30px" height="30px"></li>
+    <div class="footer-section about" style="flex:2">
+	<h1 style="margin-bottom: 0.5em;"><span>tr</span>EAT</h1>
+	<p style="font-size:1.1em; line-height: 1.6; text-align:justify">trEAT is an online snacks shopping site founded in 2019 by individuals who thrive to supply good value global snacks to meet the discerning appetite
+of every customer for quality food products and snacks for their everyday needs.
+	</p>
+	<br><br>
+	<h3 style="margin-bottom: 1em;">Follow Us On</h3>
+	<ul>
+		<li style="display:inline; margin-right: 1em"><img src="fb.svg" width="30px" height="30px"></li>
 	<li style="display:inline; margin-right: 1em"><img src="insta.svg" width="30px" height="30px"></li>
 	<li style="display:inline"><img src="twitter.svg" width="30px" height="30px"></li>
-	<p style="margin-top: 1.5em"><small><i>Copyright &copy; 2019 trEAT. All Rights Reserved.</i></small></p>
-</div>
-</ul>
+	</ul>
+    </div>
 
+
+    <div class="footer-section links" style="flex:1">
+	<h2 style="margin-bottom: 1em;">Links</h2>
+	<ul>
+	  <a href="AboutUs.html"><li style="margin-bottom: 1em">About Us</li></a>
+	  <a href="T&C.html"><li style="margin-bottom: 1em">T&C</li></a>
+	  <a href="Privacy.html"><li style="margin-bottom: 1em">Privacy Policy</li></a>
+	  <a href="FAQ.html"><li style="margin-bottom: 1em">FAQ</li></a>
+
+	</ul>
+    </div>
+
+
+    <div class="footer-section contact-form" style="flex:2" id="subscribe">
+	<h2 style="margin-bottom: 0.3em;">Get Snacks News and Deals</h2>
+	<br>
+	<small><i>*required field</I></small>
+	<form action="index.html" method="post" id="subscribeForm">
+		<br>
+		<p>E-mail*</p>
+		<input type="email" name="emailSubscribe" id="emailSubscribe" class="text-input contact-input" style="width:350px" placeholder="Your email address..."><br><br>
+		<input type="checkbox" id="checkSubscribe" value="1">&nbsp;By checking this box, you agree to receive emails from trEAT*<br><br>
+		<button type="button" class="btn btn-big contact-btn" onclick="validateSubscribe()">
+			<b>Subscribe</b>
+		</button>
+	</form>	
+    </div>
+
+  <div class="footer-bottom">
+	<small><i>Copyright &copy; 2019 trEAT. All Rights Reserved.</i></small>
+  </div>
+
+</div>
 </footer>
 
 </body>
