@@ -5,42 +5,50 @@
             var password = document.forms["accountForm"]["passwordReg"].value;
             var address = document.forms["accountForm"]["address1"].value;
             var postcode = document.forms["accountForm"]["postcode"].value;
+            var state = document.forms["accountForm"]["state"].value;
             atpos = email.indexOf("@");
             dotpos = email.lastIndexOf(".");
 
 
             if (name == "") {
             alert("Name field can't be empty!");
-            document.accountForm.user_name.focus();
+            document.getElementById("user_name").focus();
             return false;
             }
 
             if (atpos < 1 || ( dotpos - atpos < 2 )) {
             alert("Please enter email in correct format: example@mail.com");
-            document.accountForm.email.focus() ;
+            document.getElementById("emailReg").focus();
             return false;
             }
 
             if (password == "") {
-                alert("You don't like security?");
-                document.accountForm.password.focus();
-                return false;
-                }
+            alert("You don't like security?");
+            document.getElementById("passwordReg").focus();
+            return false;
+            }
 
                 
             if (address == "") {
-                alert("Address can't be empty!");
-                document.accountForm.address.focus();
-                return false;
-                }
-    
+            alert("Address can't be empty!");
+            document.getElementById("address1").focus();
+            return false;
+            }
+
 
             if( postcode == "" || postcode.length != 5 ) {
-            
-                alert( "Please provide a postcode in the format #####." );
-                document.accountForm.postcode.focus() ;
-                return false;
-             }
+            alert( "Please provide a postcode in the format #####." );
+            document.getElementById("postcode").focus();
+            return false;
+            }
+
+            if (state == "") {
+            alert("State can't be empty!");
+            document.getElementById("state").focus();
+            return false;
+            }
+
+
              document.getElementById("accountForm").submit();
         }
 
@@ -54,15 +62,15 @@
             
             if (atpos < 1 || ( dotpos - atpos < 2 )) {
             alert("Please enter email in correct format: example@mail.com")
-            document.accountForm.email.focus() ;
+            document.getElementById("emailLogin").focus();
             return false;
             }
 
             if (password == "") {
-                alert("You don't like security?");
-                document.accountForm.password.focus();
-                return false;
-                }
+            alert("Enter password!");
+            document.getElementById("passwordLogin").focus();
+            return false;
+            }
 
                 document.getElementById("loginForm").submit();
 
@@ -145,15 +153,16 @@
 
             if (atpos < 1 || ( dotpos - atpos < 2 )) {
                 alert("Please enter email in correct format: example@mail.com");
-                document.subscribeForm.email.focus() ;
+                document.getElementById("emailSubscribe").focus();
                 return false;
                 }
             
             
             if (subscribeForm.checkSubscribe.checked == false){
-                alert ('You must agree to the terms!');
-                return false;
-                }
+            alert ('You must agree to the terms!');
+            return false;
+            }
+
                 subscribe();
         }
 
@@ -164,17 +173,17 @@
         
             if (payment == "") {
                 alert("Choose method of payment!");
-                document.checkoutForm.payment.focus();
+                document.getElementById("method").focus();
                 return false;
                 }
 
 
             if (address == "") {
                 alert("Address can't be empty!");
-                document.checkoutForm.address.focus();
+                document.getElementById("addressShipping").focus();
                 return false;
                 }
-                return true;
+                validateCard();
         }
 
 
@@ -195,15 +204,18 @@
             if  (payment == "card") {
                 if (card == "") {
                     alert("Enter your Card Number on the front of the card!");
+                    document.getElementById("cardNum").focus();
                     return false;
                 }
                 else if (date == "") {
                     alert("Enter Expiry Date of the card!");
+                    document.getElementById("exp_date").focus();
                     return false;
                 }
 
                 else if (cvv == "") {
                     alert("Enter the 3-digits on the back of the card!");
+                    document.getElementById("cvv").focus();
                     return false;
                 }
 
