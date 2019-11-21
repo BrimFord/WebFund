@@ -126,38 +126,87 @@
               document.getElementById("PopUpLog").style.display='none';
           }
 
-
           
-          function timer(){
-          setTimeout(function(){
-            window.location.href = 'index.html';
-            document.getElementById("checkoutForm").submit();
-         }, 5000);
-        }
-
-
 
         function validateSubscribe(){
             var email = document.forms["subscribeForm"]["emailSubscribe"].value;
             atpos = email.indexOf("@");
             dotpos = email.lastIndexOf(".");
 
+            function subscribe(){
+                setTimeout(function(){
+                    document.getElementById("subscribe").innerHTML = "<h1 style='text-align: center; margin-top: 115px;'> Thanks for Subscribing!</h1><br><p style='text-align: center;'><i>You won't miss out on amazing deals now.</i></p>";
+                    document.getElementById("subscribeForm").submit();
+                    }, 0000);
+            }
+
             if (atpos < 1 || ( dotpos - atpos < 2 )) {
                 alert("Please enter email in correct format: example@mail.com");
                 document.subscribeForm.email.focus() ;
+                return false;
                 }
             
             
             if (subscribeForm.checkSubscribe.checked == false){
-                alert ('You didn\'t choose any of the checkboxes!');
+                alert ('You must agree to the terms!');
                 return false;
-                    }
+                }
+                subscribe();
+        }
+
+
+        function validateCheckout(){
+            var address = document.forms["checkoutForm"]["addressShipping"].value;
+            var payment = document.forms["checkoutForm"]["method"].value;
+        
+            if (payment == "") {
+                alert("Choose method of payment!");
+                document.checkoutForm.payment.focus();
+                return false;
+                }
+
+
+            if (address == "") {
+                alert("Address can't be empty!");
+                document.checkoutForm.address.focus();
+                return false;
+                }
+                return true;
+        }
+
+
+        function validateCard(){
+
+            function timer(){
+                setTimeout(function(){
+                  window.location.href = 'index.html';
+                  document.getElementById("checkoutForm").submit();
+               }, 5000);
+              }
+
+            var payment = document.forms["checkoutForm"]["method"].value;
+            var card = document.forms["checkoutForm"]["cardNum"].value;
+            var date = document.forms["checkoutForm"]["exp_date"].value;
+            var cvv = document.forms["checkoutForm"]["cvv"].value;
+
+            if  (payment == "card") {
+                if (card == "") {
+                    alert("Enter your Card Number on the front of the card!");
+                    return false;
+                }
+                else if (date == "") {
+                    alert("Enter Expiry Date of the card!");
+                    return false;
+                }
+
+                else if (cvv == "") {
+                    alert("Enter the 3-digits on the back of the card!");
+                    return false;
+                }
+
+        } [document.getElementById('PopUpThanks').style.display='block',
+            timer()];
 
         }
 
-        function subscribe(){
-            setTimeout(function(){
-            document.getElementById("subscribe").innerHTML = "<h1 style='text-align: center; margin-top: 115px;'> Thanks for Subscribing!</h1><br><p style='text-align: center;'><i>You won't miss out on amazing deals now.</i></p>";
-            document.getElementById("subscribeForm").submit();
-            }, 3000);
-        }
+
