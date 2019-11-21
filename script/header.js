@@ -212,11 +212,14 @@
                 }
 
 
-            if (address == "") {
-                alert("Address can't be empty!");
-                document.getElementById("addressShipping").focus();
-                return false;
-                }
+            if (checkoutForm.addressCheck.checked == false){
+
+                if (address == "") {
+                    alert("Address can't be empty!");
+                    document.getElementById("addressShipping").focus();
+                    return false;
+                    }
+            }
                 validateCard();
         }
 
