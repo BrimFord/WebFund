@@ -1,38 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	  <link rel="stylesheet" type="text/css" href="style/carousel.css">
-	  <link rel="stylesheet" type="text/css" href="style/treatstyle.css">
-    
-        <script src="script/carousel.js"></script>
-        <script src="script/header.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/carousel.css">
+    <link rel="stylesheet" type="text/css" href="style/treatstyle.css">
 
-  <title>Index</title>
-  <style>
-    .container3{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border: 5px;
-    }
-    .button{
-        border: none;
-        background-color: inherit;
-        padding: 14px 28px;
-        cursor: pointer;
-        display: inline-block;
-        font-size: 16px;
-        white-space: nowrap;
-    }
-    .imgc{
-        display: inline-block;
-        margin: 20px;
-        padding: 1em;
-        color: black;
-        font-family: Montserrat,Arial,sans-serif;
-         }
-
-</style>
+    <script src="script/carousel.js"></script>
+    <script src="script/header.js"></script>
+<title>trEat</title>
 </head>
 <body>
 
@@ -178,9 +152,8 @@
     <br>
     <br>
     
-    
-    
         <!-- Carousel -->
+
         <div class ="main-banner" id = "main-banner" style="border-radius: 7px;">
           <div class = "imgbanbtn imgbanbtn-prev" id="imgbanbtn-prev" >
               
@@ -208,6 +181,7 @@
 
   <br><br>
 
+<!--Countries-->
 
   <br><br>
   <div id="right-col" style="border-radius: 6px;">
@@ -219,8 +193,9 @@
         <div class="imgc"><a href="ChinaSnacks.html"><img src="China.svg" width="150px" height="150px"><p>China</p></a></div>
         <div class="imgc"><a href="MalaysianSnacks.html"><img src="Malaysia.svg" width="150px" height="150px"><p>Malaysia</p></a></div>
     </div>
-    
   </div>
+
+<!--Categories-->
 
   <div id="right-col">
     <div class="container3">
@@ -346,9 +321,10 @@
 <br><br>
 </body>
 
+<!--For the banner to stop moving-->
+
 <script>
-  <!--FOR the banner to stop moving-->
-   document.getElementById("main-banner").onmouseenter = function(){
+    document.getElementById("main-banner").onmouseenter = function(){
       clearInterval(startBannerLoop);
     }
 

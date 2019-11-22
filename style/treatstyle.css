@@ -151,9 +151,6 @@ input[type=text], input[type=password], input[type=email], input[type=number], s
 	cursor: pointer;
 }
 
-
-
-
 #right-col{
     padding-bottom: 2.5rem;
     margin-left: 155px;
@@ -186,12 +183,12 @@ input[type=text], input[type=password], input[type=email], input[type=number], s
     margin-right: 50px;
 }
 
-
 .container3{
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 5px;
 }
-
 
 .consnacks{
     display: inline-block;
@@ -219,12 +216,28 @@ input[type=text], input[type=password], input[type=email], input[type=number], s
     border: 3px solid black;
 }
 
+.imgc{
+	display: inline-block;
+	margin: 20px;
+	padding: 1em;
+	color: black;
+	font-family: Montserrat,Arial,sans-serif;
+}
 
 .buynow{
     display: flex;
     justify-content: flex-end;
 }
 
+.button{
+	border: none;
+	background-color: inherit;
+	padding: 14px 28px;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 16px;
+	white-space: nowrap;
+}
 
 .button2{
     border: none;
