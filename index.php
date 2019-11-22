@@ -1,12 +1,5 @@
 <?php
-
 session_start();
-  if(isset($_SESSION['emailLogin']) && isset($_SESSION['passwordLogin']))
-  {
-    echo "welcome";
-  }else{
-    echo "Bitch";
-  }
 ?>
 <!DOCTYPE html>
 <html>
