@@ -1,6 +1,16 @@
+<?php
+  session_start();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	  <link rel="stylesheet" type="text/css" href="style/treatstyle.css">
 
-<script src="script/header.js"></script>
-<link rel="stylesheet" href="style/treatstyle.css">
+        <script src="script/header.js"></script>
+
+  <title>Checkout</title>
+</head>
+<body>
 
 
 
@@ -18,15 +28,24 @@
                 </ul>
 
                 <!--User/Account Icon-->
-                <div onclick="document.getElementById('PopUpForm').style.display='block'" style="position: absolute; right: 50px;"><img src="img/user_circle.svg" alt="user" class="icon"></div>
-            </div>
+                <?php
+                  if(!isset($_SESSION['emailLogin']) && !isset($_SESSION['passwordLogin'])) {
+                    echo "<div onclick=";
+                    echo "document.getElementById('PopUpForm').style.display='block' style='position: absolute; right: 50px;'><img src='img/user_circle.svg' alt='user' class='icon'></div>";
 
+                    }
+                    else{
+                      echo "<div onclick=";
+                      echo "document.getElementById('PopUpLog').style.display='block' style='position: absolute; right: 50px;'><img src='img/user_circle.svg' alt='user' class='icon'></div>";
+
+                }?>
+              </div>
 
             <!--Pop-up Register & Login Form-->
             <div id="PopUpForm" class="PopUpContainer" onclick="NoPopUp()">
 
                 <!--REGISTER FORM-->
-                <form action="/handling.php" method="POST" class="PopUpContent" id="accountForm" >
+                <form action="php/handling.php" method="POST" class="PopUpContent" id="accountForm" >
                         <div style="padding: 15px;">
 
                             <!--SIGN UP & LOGIN Headings-->
@@ -87,7 +106,7 @@
 
 
                     <!--LOGIN FORM-->
-                    <form action="/handling.php" method="POST" class="PopUpContent" id="loginForm"  style="display: none;">
+                    <form action="php/check.php" method="POST" class="PopUpContent" id="loginForm"  style="display: none;">
                             <div style="padding: 15px;">
 
                                     <!--SIGN UP & LOGIN Headings-->
@@ -121,7 +140,7 @@
 
                 <!--Logout Form-->
                 <div id="PopUpLog" class="PopUpContainer" onclick="NoPopUp()">
-                    <form action="/handling.php" method="POST" class="PopUpContent" id="logoutForm" style="width: 40%;">
+                    <form method="POST" class="PopUpContent" id="logoutForm" style="width: 40%;">
 
                         <div style="padding: 15px;">
 
@@ -135,7 +154,7 @@
 
                     <!--Logout & Cancel Button-->
                     <div style="display: flex; flex-direction: row-reverse; justify-content: center;">
-                            <button type="submit" class="buttons cancelbuttons" style="margin-right: 0px;">Logout</button>
+                            <button type="button" class="buttons cancelbuttons" style="margin-right: 0px;" onclick="window.location.href='php/logout.php'">Logout</button>
                             <button type="button" class="buttons signupbuttons" style="margin-right: 20px;" onclick="window.close()">Cancel</button>
                     </div>
                     </div>
@@ -233,3 +252,6 @@
 
                         </div>
                     </div>
+
+    </body>
+</html>

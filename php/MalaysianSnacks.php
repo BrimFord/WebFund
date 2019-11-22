@@ -1,60 +1,74 @@
 <?php
+  session_start();
 
-session_start();
-  if(isset($_SESSION['emailLogin']) && isset($_SESSION['passwordLogin']))
-  {
-    echo "welcome";
-  }else{
-    echo "Bitch";
-  }
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	  <link rel="stylesheet" type="text/css" href="style/carousel.css">
-	  <link rel="stylesheet" type="text/css" href="style/treatstyle.css">
+	<title>Malaysia</title>
+	<link rel="stylesheet" type="text/css" href="style/sidebar.css">
+	<link rel="stylesheet" type="text/css" href="style/treatstyle.css">
+	<script src="script/header.js"></script>
+	<style>
+	.flex-container {
+	  padding-left: 160px;
+	  padding-top: 20px;
+	  display: flex;
+	  flex-wrap: wrap;
+	  background-color: #fff;
+	}
 
-        <script src="script/carousel.js"></script>
-        <script src="script/header.js"></script>
+	.flex-container  div {
+	  background-color: #fff;
+	  width: 400px;
+	  height: 400px
+	  margin: 10px;
+	  text-align: center;
+	  line-height: 75px;
+	  font-size: 30px;
+	  padding: 15px;
+	}
 
-  <title>Index</title>
-  <style>
-    .container3{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border: 5px;
-    }
-    .button{
-        border: none;
-        background-color: inherit;
-        padding: 14px 28px;
-        cursor: pointer;
-        display: inline-block;
-        font-size: 16px;
-        white-space: nowrap;
-    }
-    .imgc{
-        display: inline-block;
-        margin: 20px;
-        padding: 1em;
-        color: black;
-        font-family: Montserrat,Arial,sans-serif;
-         }
+	.flex-container img{
+		width: 350px;
+	 	height: 200px
+	}
+	.main-banner{
+	margin:0 auto;
+	width:100%;
+	height: 200px;
+	background-color: #fff;
+	overflow : hidden;
+	position : relative;
+}
+.main-banner .imgban{
+	width:100%;
+	height: 100%;
+	position: absolute;
+	}
 
-</style>
+
+
+
+.main-banner #banner{
+	background-image: url("img/MalaysiaBanner.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;}
+
+	</style>
+
 </head>
 <body>
 
-
         <!--Navigation Bar-->
-    <div id="header" style="z-index: 5">
+		<div id="header" style="z-index: 5">
 
             <!--Logo-->
             <div><a href="index.php"> <img src="treatlogo.png" width="150px" height="100px" style="margin: 0 10px 0 15px;"></a></div>
 
             <ul>
-                <li><a href="index.php" style="font-size: x-large; font-weight: bold;">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="MainStorePage.php">Store</a></li>
                 <li><a href="AboutUs.php">Blog</a></li>
                 <li><a href="contact.php">Contact</a></li>
@@ -126,6 +140,7 @@ session_start();
                             <label for="state">State: </label>
                             <input type="text" name="state" id="state"><br><br>
 
+
                         </div>
 
                         <!--Create Account & Cancel Button-->
@@ -161,6 +176,7 @@ session_start();
                         <img src="img/eye_slash.svg" alt="show" class="psw_icon" onclick="showPasswordLogin()" id="psw_icon_login"><br><br>
 
 
+
                         <!--Login & Cancel Button-->
                         <div class="clearfix">
                                 <button type="button" class="buttons signupbuttons" onclick="validateFormLogin()">Login</button>
@@ -172,7 +188,7 @@ session_start();
 
             <!--Logout Form-->
             <div id="PopUpLog" class="PopUpContainer" onclick="NoPopUp()">
-                <form method="POST" class="PopUpContent" id="logoutForm" style="width: 40%;">
+                <form  method="POST" class="PopUpContent" id="logoutForm" style="width: 40%;">
 
                     <div style="padding: 15px;">
 
@@ -193,210 +209,46 @@ session_start();
                 </form>
             </div>
 
+       <div class="sidenav">
+           <h2>Navigation</h2>
+           <br>
+       	<a href="ChinaSnacks.php">Chinese Snacks</a><br>
+  		<a href="JapanSnacks.php">Japanese Snacks</a><br>
+ 		<a href="KoreanSnacks.php">Korean Snacks</a><br>
+  		<a href="ThailandSnacks.php">Thai <br> Snacks</a><br>
+  		<a href="MalaysianSnacks.php">Malaysian Snacks</a>
+
+		</div>
+
+		<div class ="main-banner">
+          <div class ="imgban" id = "banner"></div>
+    	</div>
+        </div>
+        <br><br>
+        <p class="welcomeMSG">Welcome to the world of Malaysian snacks</p>
+        <br><br>
+
+		<div class ="flex-container">
+			<div>
+				<a href="msia(sweet1).php">
+				<img src="msia(sweet1).png">Iced Gems<p>RM 5.00</p></a> </div>
+			<div>
+				<a href="msia(salty1).php">
+				<img src="msia(salty1).png">Mi-Mi<p>RM5.00</p></a></div>
+			<div>
+				<a href="msia(sour1).php">
+				<img src="msia(sour1).png">Lot 100 Sour+ Gummy<p>RM3.50</p></a></div>
+			<div>
+				<a href="msia(spicy1).php">
+				<img src="msia(spicy1).png">Dahfa Dried Fish Fillet	<p>RM 7.50</p></a></div>
 
 
-    <br>
-    <br>
 
-
-
-        <!-- Carousel -->
-        <div class ="main-banner" id = "main-banner" style="border-radius: 7px;">
-          <div class = "imgbanbtn imgbanbtn-prev" id="imgbanbtn-prev" >
-
-          </div>
-          <a href="JapanSnacks.php">
-          <div class ="imgban" id = "imgban3">
-            <div class = "imgban-box">
-              <h2></h2>
-            </div>
-          </div>
-        </a>
-          <a href="MalaysianSnacks.php"><div class ="imgban" id = "imgban2">
-            <div class = "imgban-box">
-              <h2></h2>
-            </div>
-          </div></a>
-          <a href="index.php"><div class ="imgban" id = "imgban1">
-            <div class = "imgban-box">
-              <h2></h2>
-            </div>
-          </div> </a>
-          <div class = "imgbanbtn imgbanbtn-next" id="imgbanbtn-next"></div>
-        </div>
-
-
-  <br><br>
-
-
-  <br><br>
-  <div id="right-col" style="border-radius: 6px;">
-    <span><h1>Countries</h1></span>
-    <div class="container" style=" text-align: center;">
-        <div class="imgc"><a href="JapanSnacks.php"><img src="Japan.svg" width="150px" height="150px"><p>Japan</p></a></div>
-        <div class="imgc"><a href="KoreanSnacks.php"><img src="SouthKorea.svg" width="150px" height="150px"><p>South Korea</p></a></div>
-        <div class="imgc"><a href="ThailandSnacks.php"><img src="Thailand.svg" width="150px" height="150px"><p>Thailand</p></a></div>
-        <div class="imgc"><a href="ChinaSnacks.php"><img src="China.svg" width="150px" height="150px"><p>China</p></a></div>
-        <div class="imgc"><a href="MalaysianSnacks.php"><img src="Malaysia.svg" width="150px" height="150px"><p>Malaysia</p></a></div>
-    </div>
-
-  </div>
-
-  <div id="right-col">
-    <div class="container3">
-        <h1>Categories</h1>
-        <a href="MainStorePage.php">
-            <button class="button2">See All</button>
-        </a>
-    </div>
-    <br><br>
-    <h2>Sweet</h2>
-    <div class="container">
-        <div class="img">
-            <a href="japan(sweet1).php">
-                <img src="japan(sweet1).png" width="150px" height="200px"><p>Morinaga Milk Caramel</p>
-            </a>
-        </div>
-        <div class="img">
-            <a href="korea(sweet1).php">
-                <img src="korea(sweet1).png" width="130px" height="200px"><p>Lotto Pepero Almond & Chocolate Sticks</p>
-            </a>
-        </div>
-        <div class="img">
-            <a href="thai(sweet1).php">
-                <img src="thai(sweet1).png" width="250px" height="200px"><p>Euro Marble Cake</p>
-            </a>
-        </div>
-        <div class="img">
-            <a href="china(sweet1).php">
-                <img src="china(sweet1).png" width="180px" height="200px"><p>White Rabbit Candy</p>
-            </a>
-        </div>
-        <div class="img">
-            <a href="msia(sweet1).php">
-                <img src="msia(sweet1).png" width="180px" height="200px"><p>Iced Gems Biscuits</p>
-            </a>
-        </div>
-    </div>
-    <br><br><h2>Sour</h2>
-    <div class="container">
-        <div class="img">
-            <a href="japan(sour1).php">
-                <img src="japan(sour1).png" width="150px" height="200px"><p>Hoshiume Dried Plums</p>
-            </a>
-        </div>
-        <div class="img">
-            <a href="korea(sour1).php">
-                <img src="korea(sour1).png" width="150px" height="200px"><p>Aye-shyuh Sour Candy</p>
-            </a>
-        </div>
-        <div class="img">
-            <a href="thai(sour1).php">
-                <img src="thai(sour1).png" width="180px" height="200px"><p>Strawberry Rip Rolls</p>
-            </a>
-        </div>
-        <div class="img">
-            <a href="china(sour1).php">
-                <img src="china(sour1).jpg" width="200px" height="200px"><p>Li Hing Mui Drops</p>
-            </a>
-        </div>
-        <div class="img">
-            <a href="msia(sour1).php">
-                <img src="msia(sour1).png" width="150px" height="200px"><p>Lot 100 Sour+ Blackcurrant Gummy</p>
-            </a>
-        </div>
-    </div>
-    <br><br><h2>Salty</h2>
-    <div class="container">
-        <div class="img">
-            <a href="japan(salty1).php">
-                <img src="japan(salty1).png" width="150px" height="200px"><p>Calbee Seaweed & Salt Chips</p>
-            </a>
-        </div>
-        <div class="img">
-            <a href="korea(salty1).php">
-                <img src="korea(salty1).png" width="180px" height="200px"><p>Crab Chips</p>
-            </a>
-        </div>
-        <div class="img">
-            <a href="thai(salty1).php">
-                <img src="thai(salty1).png" width="200px" height="200px"><p>Lays Assorted Nori Seaweed Potato Chips</p>
-            </a>
-        </div>
-        <div class="img">
-            <a href="china(salty1).php">
-                <img src="china(salty1).jpg" width="200px" height="200px"><p>Wang Wang Snow Cookies</p>
-            </a>
-        </div>
-        <div class="img">
-            <a href="msia(salty1).php">
-                <img src="msia(salty1).png" width="180px" height="200px"><p>Mi-Mi</p>
-            </a>
-        </div>
-    </div>
-    <br><br><h2>Spicy</h2>
-    <div class="container">
-        <div class="img">
-            <a href="japan(spicy1).php">
-                <img src="japan(spicy1).png" width="150px" height="200px"><p>Kara Mucho</p>
-            </a>
-        </div>
-        <div class="img">
-            <a href="korea(spicy1).php">
-                <img src="korea(spicy1).png" width="150px" height="200px"><p>Tteokbokki Snack</p>
-            </a>
-        </div>
-        <div class="img">
-            <a href="thai(spicy1).php">
-                <img src="thai(spicy1).png" width="150px" height="200px"><p>Bento Squid Seafood Snack</p>
-            </a>
-        </div>
-        <div class="img">
-            <a href="china(spicy1).php">
-                <img src="china(spicy1).jpg" width="150px" height="200px"><p>China Spicy Strips</p>
-            </a>
-        </div>
-        <div class="img">
-            <a href="msia(spicy1).php">
-                <img src="msia(spicy1).png" width="180px" height="200px"><p>Dahfa Dried Fish Fillet</p>
-            </a>
-        </div>
-    </div>
-</div>
-<br><br>
-</body>
-
-<script>
-  <!--FOR the banner to stop moving-->
-   document.getElementById("main-banner").onmouseenter = function(){
-      clearInterval(startBannerLoop);
-    }
-
-    document.getElementById("main-banner").onmouseleave=function(){startBannerLoop = setInterval(function(){ bannerLoop();
-    }, bannerTimer);
-  }
-
-   document.getElementById("imgbanbtn-prev").onclick = function(){
-      if (bannerStatus===1){
-        bannerStatus = 2;
-      }
-      else if (bannerStatus===2){
-        bannerStatus = 3;
-      }
-      else if (bannerStatus===3){
-        bannerStatus = 1;
-      }
-      bannerLoop2();
-
-    }
-    document.getElementById("imgbanbtn-next").onclick = function(){bannerLoop()
-    }
-</script>
-
+		</div>
 
 <!--Footer-->
 
-<footer class="footer">
+<footer class="footer" style="z-index: 6">
   <div class="footer-content">
 
 
@@ -409,7 +261,7 @@ of every customer for quality food products and snacks for their everyday needs.
 	<h3 style="margin-bottom: 1em;">Follow Us On</h3>
 	<ul>
 		<li style="display:inline; margin-right: 1em"><img src="fb.svg" width="30px" height="30px"></li>
-	<li style="display:inline; margin-right: 1em"><a href="https://www.instagram.com/treat_my/" target="_blank"><a href="https://www.instagram.com/treat_my/" target="_blank"><img src="insta.svg" width="30px" height="30px"></a></a></li>
+	<li style="display:inline; margin-right: 1em"><img src="insta.svg" width="30px" height="30px"></li>
 	<li style="display:inline"><img src="twitter.svg" width="30px" height="30px"></li>
 	</ul>
     </div>
@@ -449,4 +301,5 @@ of every customer for quality food products and snacks for their everyday needs.
 </div>
 </footer>
 
+</body>
 </html>
