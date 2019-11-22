@@ -28,7 +28,7 @@
 
 
             if (address == "") {
-                alert("Address can't be empty!");
+                alert("Address field can't be empty!");
                 document.getElementById("address1").focus();
                 return false;
                 }
@@ -42,7 +42,7 @@
 
 
             if (state == "") {
-                alert("State can't be empty!");
+                alert("State field can't be empty!");
                 document.getElementById("state").focus();
                 return false;
                 }
@@ -217,7 +217,7 @@
             if (checkoutForm.addressCheck.checked == false){
 
                 if (address == "") {
-                    alert("Address can't be empty!");
+                    alert("Address field can't be empty!");
                     document.getElementById("addressShipping").focus();
                     return false;
                     }
@@ -245,7 +245,7 @@
 
             if  (payment == "card") {
                 if (card == "") {
-                    alert("Enter your Card Number on the front of the card!");
+                    alert("Enter your Card Number located on the front of the card!");
                     document.getElementById("cardNum").focus();
                     return false;
                 }
