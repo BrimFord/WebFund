@@ -436,7 +436,7 @@ of every customer for quality food products and snacks for their everyday needs.
 		<p>E-mail*</p>
 		<input type="email" name="emailSubscribe" id="emailSubscribe" class="text-input contact-input" style="width:350px" placeholder="Your email address..."><br><br>
 		<input type="checkbox" id="checkSubscribe" value="1">&nbsp;By checking this box, you agree to receive emails from trEAT*<br><br>
-		<button type="button" class="btn btn-big contact-btn" onclick="validateSubscribe()">
+		<button type="button" class="btn btn-big contact-btn" onclick="validateSubscribe();">
 			<b>Subscribe</b>
 		</button>
 	</form>

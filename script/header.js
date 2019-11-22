@@ -26,7 +26,7 @@
                 return false;
                 }
 
-                
+
             if (address == "") {
                 alert("Address can't be empty!");
                 document.getElementById("address1").focus();
@@ -60,7 +60,7 @@
              var email = document.getElementById("emailLogin").value;
              var password = document.getElementById("passwordLogin").value;
 
-            
+
             if (email == "") {
                 alert("Please enter email in correct format: example@mail.com")
                 document.getElementById("emailLogin").focus();
@@ -85,7 +85,7 @@
         function NoPopUp (){
             var RegForm = document.getElementById('PopUpForm');
             var LogForm = document.getElementById('PopUpLog');
-            
+
             if (event.target == RegForm) {
                 RegForm.style.display = "none";
             }
@@ -156,7 +156,7 @@
                     } else if (document.getElementById('method').value == "cod"){
                         document.getElementById('card').style.display = 'none';
                     }
-                    
+
             }
 
 
@@ -168,7 +168,7 @@
               document.getElementById("PopUpLog").style.display='none';
           }
 
-          
+
 
 
 
@@ -176,10 +176,12 @@
             var email = document.getElementById("emailSubscribe").value;
 
             function subscribe(){
+
                 setTimeout(function(){
                     document.getElementById("subscribe").innerHTML = "<h1 style='text-align: center; margin-top: 115px;'> Thanks for Subscribing!</h1><br><p style='text-align: center;'><i>You won't miss out on amazing deals now.</i></p>";
                     document.getElementById("subscribeForm").submit();
                     }, 1000);
+                    window.location.href="php/subscribeHandling.php";
             }
 
             if (email == "") {
@@ -187,8 +189,8 @@
                 document.getElementById("emailSubscribe").focus();
                 return false;
             }
-        
-            
+
+
             if (subscribeForm.checkSubscribe.checked == false){
                 alert ('You must agree to the terms!');
                 return false;
@@ -204,7 +206,7 @@
         function validateCheckout(){
             var address = document.getElementById("addressShipping").value;
             var payment = document.getElementById("method").value;
-        
+
             if (payment == "") {
                 alert("Choose method of payment!");
                 document.getElementById("method").focus();
@@ -226,7 +228,7 @@
 
 
 
-        
+
         function validateCard(){
 
             function timer(){
@@ -263,5 +265,3 @@
             timer()];
 
         }
-
-
