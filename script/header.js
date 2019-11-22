@@ -7,6 +7,9 @@
             var postcode = document.getElementById("postcode").value;
             var state = document.getElementById("state").value;
 
+            atpos = email.indexOf("@");
+            dotpos = email.lastIndexOf(".");
+
 
             if (name == "") {
                 alert("Name field can't be empty!");
@@ -14,7 +17,7 @@
                 return false;
                 }
 
-            if (email == "") {
+            if (email == "" || atpos < 1 || ( dotpos - atpos < 2 )) {
                 alert("Please enter email in correct format: example@mail.com");
                 document.getElementById("emailReg").focus();
                 return false;
@@ -60,8 +63,10 @@
              var email = document.getElementById("emailLogin").value;
              var password = document.getElementById("passwordLogin").value;
 
+            atpos = email.indexOf("@");
+            dotpos = email.lastIndexOf(".");
 
-            if (email == "") {
+            if (email == "" || atpos < 1 || ( dotpos - atpos < 2 )) {
                 alert("Please enter email in correct format: example@mail.com")
                 document.getElementById("emailLogin").focus();
                 return false;
@@ -175,6 +180,9 @@
         function validateSubscribe(){
             var email = document.getElementById("emailSubscribe").value;
 
+            atpos = email.indexOf("@");
+            dotpos = email.lastIndexOf(".");
+
             function subscribe(){
 
                 setTimeout(function(){
@@ -184,7 +192,7 @@
                     window.location.href="php/subscribeHandling.php";
             }
 
-            if (email == "") {
+            if (email == "" || atpos < 1 || ( dotpos - atpos < 2 )) {
                 alert("Please enter email in correct format: example@mail.com");
                 document.getElementById("emailSubscribe").focus();
                 return false;
